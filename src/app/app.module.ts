@@ -20,7 +20,8 @@ import {NavbarComponent} from './navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    NgModule
   ],
   providers: [],
   bootstrap: [AppComponent]
