@@ -1,4 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+// Import a user model if available
+// Import a custom register service
+
 
 @Component({
   selector: 'app-register',
@@ -7,24 +10,47 @@ import {Component, OnInit} from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  password: string = '';
-  passwordConfirm: string = '';
-  formsMatch: boolean = false;
+  username: string;
+  password: string;
+  password2: string;
+  first_name: string;
+  last_name: string;
+  email: string;
+
+  passwordsMatch: boolean;
+  nextForm: boolean = false;
+
+  passwordMatch = () => {
+    if (this.password == '' || this.password2 == ''){
+      this.passwordsMatch = false;
+    } 
+
+    if (this.password === this.password2){
+      this.passwordsMatch = true;
+    } else {
+      this.passwordsMatch = false;
+    }
+  }
 
   constructor() {
+    //Insert services in the parameters
   }
 
   ngOnInit() {
   }
 
-  matchForms = () => {
-    if(this.password != '' && this.passwordConfirm != ''){
-      if(this.password === this.passwordConfirm){
-        this.formsMatch = true;
-      } else this.formsMatch = false;
-    } else {
-      this.formsMatch = false;
-    }
-  }
+  // matchForms = () => {
+  //   if(this.password != '' && this.passwordConfirm != ''){
+  //     if(this.password === this.passwordConfirm){
+  //       this.formsMatch = true;
+  //     } else this.formsMatch = false;
+  //   } else {
+  //     this.formsMatch = false;
+  //   }
+  // }
 
+  nextStep = () => {
+      this.nextForm = true;
+    }
 }
+
