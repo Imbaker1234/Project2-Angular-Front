@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Example</title>
+
+<!-- CSS -->
+<style>
+/* Force scrollbars onto browser window */
+body {
+margin-bottom: 200%;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Box styles */
+.myBox {
+border: none;
+padding: 5px;
+font: 24px/36px sans-serif;
+width: 200px;
+height: 200px;
+overflow-y: scroll;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 12px;
+height: 12px;
+}
+
+::-webkit-scrollbar-track {
+border: 1px solid yellowgreen;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+background: yellowgreen;  
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #88ba1c;  
+}
+</style>
+</head>
+<body>
+
+<!-- HTML -->
+<div class = "row">
+    <p>Insert all rules for moderation here.</p>
+</div>
+<div class= "row">
+<div class="column">
+Efficient diampaonapsio asdvjans;vmnzp askla sdjpv cvklsd pasdkj pasklfj asp
+</div>
+<div class= "column">
+    <button type = "button"> Delete comment. </button>
+</div>
+</div>
+
+</body>
+</html>
