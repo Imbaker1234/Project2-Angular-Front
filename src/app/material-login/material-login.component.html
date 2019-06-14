@@ -1,0 +1,103 @@
+<div class="container animated fadeIn slow">
+    <mat-card style="box-shadow: #1f1f1f 2px 2px 1px 1px">
+      <div style="text-align: center">
+        <h4>A new Art Lover? Or just new to us?</h4>
+        Either way we're happy to have you. We just need a few details to get started.
+      </div>
+      <mat-divider></mat-divider>
+    <mat-horizontal-stepper [linear]="isLinear" #stepper>
+
+    <div style="align-content: center">
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>First</ng-template>
+          <mat-form-field>
+            <input [(ngModel)]="first" matInput placeholder="First Name Here" formControlName="firstCtrl" required
+                   minlength="2">
+          </mat-form-field>
+          <div>
+            <button mat-raised-button matStepperNext>></button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Last</ng-template>
+          <mat-form-field>
+            <input [(ngModel)]="last" matInput placeholder="It also goes here" formControlName="secondCtrl"
+                   required minlength="2">
+          </mat-form-field>
+          <div>
+            <button mat-raised-button matStepperPrevious><</button>
+            <button mat-raised-button matStepperNext>></button>
+          </div>
+        </form>
+      </mat-step>
+      <div>
+
+        <mat-step [stepControl]="thirdFormGroup">
+          <form [formGroup]="thirdFormGroup">
+            <ng-template matStepLabel>Email</ng-template>
+            <mat-form-field>
+              <input [(ngModel)]="email" matInput placeholder="We want this too." formControlName="thirdCtrl"
+                     required email="">
+            </mat-form-field>
+            <div>
+              <button mat-raised-button matStepperPrevious><</button>
+              <button mat-raised-button matStepperNext>></button>
+            </div>
+          </form>
+        </mat-step>
+      </div>
+
+      <mat-step [stepControl]="fourthFormGroup">
+        <form [formGroup]="fourthFormGroup">
+          <ng-template matStepLabel>User</ng-template>
+          <mat-form-field>
+            <input [(ngModel)]="username" matInput placeholder="Your 'true' identity" formControlName="fourthCtrl"
+                   required>
+          </mat-form-field>
+          <div>
+            <button mat-raised-button matStepperPrevious><</button>
+            <button mat-raised-button matStepperNext>></button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step [stepControl]="fifthFormGroup">
+        <form [formGroup]="fifthFormGroup">
+          <ng-template matStepLabel>Pass</ng-template>
+          <mat-form-field>
+            <input [(ngModel)]="password" matInput type="password"
+                   placeholder="Keeps the trolls out. Mostly."
+                   formControlName="fifthCtrl"
+                   required>
+          </mat-form-field>
+          <div>
+            <button mat-raised-button matStepperPrevious (click)="this.reviewDetails = false"><</button>
+            <button mat-raised-button matStepperNext
+                    (click)="this.reviewDetails = true" (click)="toggle()">></button>
+          </div>
+        </form>
+      </mat-step>
+    </div>
+    </mat-horizontal-stepper>
+
+    <div id="reviewCard" [ngClass]="" class="container animated fadeIn" *ngIf="reviewDetails">
+      <mat-divider></mat-divider>
+      <br>
+      <br>Name: {{ first }} {{ last }}
+      <br>Email: {{ email }}
+      <br>User: {{ username }}
+      <br>Password: **********
+      <br>
+      <br>
+      <mat-divider></mat-divider>
+      <br>
+      <br>
+      <button mat-raised-button (click)="this.reviewDetails = false">No wait....</button>
+      <button mat-raised-button (click)="submitNewUser()">Look's Good!</button>
+    </div>
+    </mat-card>
+  </div>
