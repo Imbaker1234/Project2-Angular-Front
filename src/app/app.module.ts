@@ -12,6 +12,7 @@ import {CommonModule} from '@angular/common';
 import { Register2Component } from './register2/register2.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { NewsComponent } from './news/news.component';
+import { MediaComponent } from './media/media.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NewsComponent } from './news/news.component';
     NavbarComponent,
     Register2Component,
     ArticlesComponent,
-    NewsComponent
+    NewsComponent,
+    MediaComponent
   ],
   imports: [
     BrowserModule,
