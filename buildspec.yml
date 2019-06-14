@@ -16,10 +16,10 @@ phases:
       - echo Deploying production files to S3 web hosting bucket
       - aws s3 sync --delete dist s3://project-2-angular-front
       - echo Files deployed on `date`
-  artifacts:
-    files:
-      - '**/*'
-    base-directory: 'dist'
-    discard-paths: yes1
+  #  artifacts:
+  #    files:
+  #      - '**/*'
+  #    base-directory: 'dist'
+  #    discard-paths: yes1
 
-  # Attempt:6
+  # Attempt:7
