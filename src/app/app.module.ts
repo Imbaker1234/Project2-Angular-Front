@@ -10,6 +10,7 @@ import {MainViewComponent} from './main-view/main-view.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {CommonModule} from '@angular/common';
 import { Register2Component } from './register2/register2.component';
+import { ArticlesComponent } from './articles/articles.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Register2Component } from './register2/register2.component';
     SignInComponent,
     MainViewComponent,
     NavbarComponent,
-    Register2Component
+    Register2Component,
+    ArticlesComponent
   ],
   imports: [
     BrowserModule,

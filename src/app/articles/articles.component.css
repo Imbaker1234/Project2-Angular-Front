@@ -1,0 +1,12 @@
+.article{
+
+    background-image: url('./images/dark-streaks.jpg');
+    border: 6rem 10rem;
+    padding: 3rem 5rem;
+    color: whitesmoke;
+    
+}
+
+h1, h5 {
+    text-align: center;
+}
