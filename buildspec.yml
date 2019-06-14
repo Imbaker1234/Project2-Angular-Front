@@ -21,3 +21,5 @@ artifacts:
     - '**/*'
     base-directory: 'dist'
     discard-paths: yes1
+
+# Attempt:1
