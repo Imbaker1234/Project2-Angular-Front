@@ -4,16 +4,12 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {LoginViewComponent} from './login-view/login-view.component';
 import {SignInComponent} from './sign-in/sign-in.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MainViewComponent} from './main-view/main-view.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {CommonModule} from '@angular/common';
-
-
 // Angular Material Components
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCheckboxModule} from '@angular/material';
-import {MatButtonModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -42,8 +38,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import { MaterialLoginComponent } from './material-login/material-login.component';
-import { FavoriteArtComponent } from './favorite-art/favorite-art.component';
+import {MaterialLoginComponent} from './material-login/material-login.component';
+import {FavoriteArtComponent} from './favorite-art/favorite-art.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -59,6 +56,7 @@ import { FavoriteArtComponent } from './favorite-art/favorite-art.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -92,8 +90,7 @@ import { FavoriteArtComponent } from './favorite-art/favorite-art.component';
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule,
-    ReactiveFormsModule
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
