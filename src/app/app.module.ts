@@ -11,6 +11,7 @@ import {NavbarComponent} from './navbar/navbar.component';
 import {CommonModule} from '@angular/common';
 import { Register2Component } from './register2/register2.component';
 import { ArticlesComponent } from './articles/articles.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ArticlesComponent } from './articles/articles.component';
     MainViewComponent,
     NavbarComponent,
     Register2Component,
-    ArticlesComponent
+    ArticlesComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
