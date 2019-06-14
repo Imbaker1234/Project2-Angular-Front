@@ -19,7 +19,7 @@ phases:
   artifacts:
     files:
       - '**/*'
-      base-directory: 'dist'
-      discard-paths: yes1
+    base-directory: 'dist'
+    discard-paths: yes1
 
-  # Attempt:5
+  # Attempt:6
