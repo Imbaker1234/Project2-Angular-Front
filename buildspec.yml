@@ -1,10 +1,5 @@
 version: 0.2
-env:
-  variables:
-    CACHE_CONTROL: "86400"
-    S3_BUCKET: "arn:aws:s3:::project-2-angular-front"
-    BUILD_FOLDER: "dist"
-    BUILD_ENV: "prod"
+
 phases:
   install:
     runtime-versions:
@@ -16,10 +11,10 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - ng build --${BUILD_ENV}
+      - ng build --prod
   post_build:
     commands:
-      - aws s3 cp ${BUILD_FOLDER} s3://${S3_BUCKET} --recursive --acl public-read --cache-control "max-age=${CACHE_CONTROL}"
+      - aws s3 cp dist s3://arn:aws:s3:::project-2-angular-front --recursive --acl public-read --cache-control "max-age=86400"
       - echo Build completed on `date`
 artifacts:
   files:
