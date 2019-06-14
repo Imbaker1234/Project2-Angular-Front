@@ -2,7 +2,8 @@ version: 0.2
 
 phases:
   install:
-    runtime: nodejs10
+    runtime-versions:
+      - nodejs10
     commands:
       - echo Installing source NPM dependencies…
       - npm install
@@ -23,4 +24,4 @@ phases:
   #    base-directory: 'dist'
   #    discard-paths: yes1
 
-  # Attempt:9
+  # Attempt:11
