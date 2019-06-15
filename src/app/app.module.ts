@@ -41,6 +41,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MaterialLoginComponent} from './material-login/material-login.component';
 import {FavoriteArtComponent} from './favorite-art/favorite-art.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ShowingsComponent } from './showings/showings.component';
+import { NewsComponent } from './news/news.component';
+import { StumbleButtonComponent } from './stumble-button/stumble-button.component';
 
 
 @NgModule({
@@ -51,7 +54,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MainViewComponent,
     NavbarComponent,
     MaterialLoginComponent,
-    FavoriteArtComponent
+    FavoriteArtComponent,
+    ShowingsComponent,
+    NewsComponent,
+    StumbleButtonComponent
   ],
   imports: [
     BrowserModule,
