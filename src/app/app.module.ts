@@ -4,6 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {LoginViewComponent} from './login-view/login-view.component';
 import {SignInComponent} from './sign-in/sign-in.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MainViewComponent} from './main-view/main-view.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {CommonModule} from '@angular/common';
@@ -38,8 +39,6 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import {FavoriteArtComponent} from './favorite-art/favorite-art.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RegisterComponent} from './register/register.component';
 
 
@@ -50,13 +49,11 @@ import {RegisterComponent} from './register/register.component';
     SignInComponent,
     MainViewComponent,
     NavbarComponent,
-    FavoriteArtComponent,
     RegisterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule,
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -90,7 +87,8 @@ import {RegisterComponent} from './register/register.component';
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
