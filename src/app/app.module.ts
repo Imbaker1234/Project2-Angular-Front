@@ -38,9 +38,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import {MaterialLoginComponent} from './material-login/material-login.component';
 import {FavoriteArtComponent} from './favorite-art/favorite-art.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RegisterComponent} from './register/register.component';
 
 
 @NgModule({
@@ -50,8 +50,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     SignInComponent,
     MainViewComponent,
     NavbarComponent,
-    MaterialLoginComponent,
-    FavoriteArtComponent
+    FavoriteArtComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
