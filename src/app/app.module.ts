@@ -40,6 +40,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {RegisterComponent} from './register/register.component';
+import {WelcomeComponent} from './welcome/welcome.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import {RegisterComponent} from './register/register.component';
     SignInComponent,
     MainViewComponent,
     NavbarComponent,
-    RegisterComponent
+    RegisterComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
