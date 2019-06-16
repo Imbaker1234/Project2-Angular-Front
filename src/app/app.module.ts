@@ -44,6 +44,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ShowingsComponent } from './showings/showings.component';
 import { NewsComponent } from './news/news.component';
 import { StumbleButtonComponent } from './stumble-button/stumble-button.component';
+import { FavoriteArtistComponent } from './favorite-artist/favorite-artist.component';
+import { UploadarticleComponent } from './uploadarticle/uploadarticle.component';
 
 
 @NgModule({
@@ -57,7 +59,9 @@ import { StumbleButtonComponent } from './stumble-button/stumble-button.componen
     FavoriteArtComponent,
     ShowingsComponent,
     NewsComponent,
-    StumbleButtonComponent
+    StumbleButtonComponent,
+    FavoriteArtistComponent,
+    UploadarticleComponent
   ],
   imports: [
     BrowserModule,
