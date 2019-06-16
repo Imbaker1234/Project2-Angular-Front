@@ -43,6 +43,7 @@ import {RegisterComponent} from './register/register.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import { ArtviewComponent } from './artview/artview.component';
 import { CommentComponent } from './comment/comment.component';
+import {FavoriteArtComponent} from './favorite-art/favorite-art.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { CommentComponent } from './comment/comment.component';
     RegisterComponent,
     WelcomeComponent,
     ArtviewComponent,
-    CommentComponent
+    CommentComponent,
+    FavoriteArtComponent
   ],
   imports: [
     BrowserModule,
