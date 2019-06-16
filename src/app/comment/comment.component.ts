@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentComponent implements OnInit {
 
+authorName= "SirBarksALot";
+commentContent= "I really don't think this is appropriate for children.\n\nohno...";
+
   constructor() { }
 
   ngOnInit() {
