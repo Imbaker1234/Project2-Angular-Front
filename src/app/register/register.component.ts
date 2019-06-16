@@ -22,19 +22,11 @@ export class RegisterComponent implements OnInit {
   reviewDetails = false;
 
   show = false;
+  reviewCardEffect = 'container animated fadeIn';
 
   constructor(private fb: FormBuilder) {
   }
 
-  get stateName() {
-    console.log('get stateName() called');
-    return this.show ? 'show' : 'hide';
-  }
-
-  toggle() {
-    console.log('toggle() called.');
-    this.show = !this.show;
-  }
 
   ngOnInit() {
     this.firstFormGroup = this.fb.group({
@@ -57,6 +49,10 @@ export class RegisterComponent implements OnInit {
       fifthCtrl: ['', Validators.required]
     });
 
+  }
+
+  toggleReviewDetails() {
+    this.reviewDetails = !this.reviewDetails;
   }
 
   submitNewUser() {

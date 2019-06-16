@@ -75,8 +75,10 @@
                      type="password">
             </mat-form-field>
             <div>
-              <button (click)="this.reviewDetails = false" mat-raised-button matStepperPrevious><</button>
-              <button (click)="this.reviewDetails = true" (click)="toggle()"
+              <button (click)="this.reviewDetails = false" class="animated fadeIn" mat-raised-button
+                      matStepperPrevious><
+              </button>
+              <button (click)="this.toggleReviewDetails()" *ngIf="this.reviewDetails == false"
                       mat-raised-button matStepperNext>>
               </button>
             </div>
@@ -85,7 +87,7 @@
       </div>
     </mat-horizontal-stepper>
 
-    <div *ngIf="reviewDetails" [ngClass]="" class="container animated fadeIn" id="reviewCard">
+    <div *ngIf="reviewDetails" [ngClass]="reviewCardEffect" class="container animated fadeIn" id="reviewCard">
       <mat-divider></mat-divider>
       <br>
       <br>Name: {{ first }} {{ last }}
@@ -97,7 +99,7 @@
       <mat-divider></mat-divider>
       <br>
       <br>
-      <button (click)="this.reviewDetails = false" mat-raised-button>No wait....</button>
+      <button (click)="this.toggleReviewDetails()" mat-raised-button>No wait....</button>
       <button (click)="submitNewUser()" mat-raised-button>Look's Good!</button>
     </div>
   </mat-card>
