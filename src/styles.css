@@ -23,3 +23,8 @@ body {
 #not-nav {
   margin-top: .1vh;
 }
+
+#compbody {
+margin: 4vh 25vw 2vh 25vw;
+align-content: center;
+}
