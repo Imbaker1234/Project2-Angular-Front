@@ -41,6 +41,8 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {RegisterComponent} from './register/register.component';
 import {WelcomeComponent} from './welcome/welcome.component';
+import { ArtviewComponent } from './artview/artview.component';
+import { CommentComponent } from './comment/comment.component';
 
 
 @NgModule({
@@ -51,7 +53,9 @@ import {WelcomeComponent} from './welcome/welcome.component';
     MainViewComponent,
     NavbarComponent,
     RegisterComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ArtviewComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
