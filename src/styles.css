@@ -7,9 +7,15 @@ html, body { height: 100%; }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: #242424
+  background-color: #242424;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  color: transparent;
 }
 
 #not-nav {
-  margin-top: 8vh;
+  margin-top: .1vh;
 }
