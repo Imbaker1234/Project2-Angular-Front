@@ -1,8 +1,30 @@
 <!--TODO refactor compbody-->
-<mat-card id="compbody" >
+<mat-card id="compbody" style="margin: 3% 10% 5% 12%;">
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col-8">
 
-<div id= "artview-scrollingbody">
-  <img src="https://i.redd.it/ac7309egm87z.jpg" width= 95%; height = 75%; style= "padding: 5px 0px 0px 45px;" >
-  <app-comment></app-comment>
-</div>
+        <div id="artview-scrollingbody">
+          <img src="https://i.redd.it/ac7309egm87z.jpg" width=95%; height=75%; style="padding: 5px 0px 0px 45px;">
+        </div>
+        <div>
+          <h4>About</h4>
+          <app-about></app-about>
+        </div>
+      </div>
+      <div class="col-4">
+
+        <mat-chip-list style="padding: 45px 45px 45px 45px;">
+          <mat-chip>Wig</mat-chip>
+          <!--TODO Take the info in the JSON object and ring it automatically in the chips.-->
+          <mat-chip>Savage</mat-chip>
+          <mat-chip>It's Britney, Bitch.</mat-chip>
+        </mat-chip-list>
+        <app-commentslist></app-commentslist>
+        <textarea>djspofakpkaslkdfamsplk</textarea>
+
+      </div>
+    </div>
+
+  </div>
 </mat-card>
