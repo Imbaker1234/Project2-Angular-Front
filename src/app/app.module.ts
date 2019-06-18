@@ -41,9 +41,12 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {RegisterComponent} from './register/register.component';
 import {WelcomeComponent} from './welcome/welcome.component';
-import { ArtviewComponent } from './artview/artview.component';
-import { CommentComponent } from './comment/comment.component';
+import {ArtviewComponent} from './artview/artview.component';
+import {CommentComponent} from './comment/comment.component';
 import {FavoriteArtComponent} from './favorite-art/favorite-art.component';
+import {HttpClientModule} from '@angular/common/http';
+import {RouterModule} from '@angular/router';
+import {AppRoutingModule} from './app-routing.module';
 
 
 @NgModule({
@@ -65,6 +68,9 @@ import {FavoriteArtComponent} from './favorite-art/favorite-art.component';
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    RouterModule,
+    AppRoutingModule,
     MatCheckboxModule,
     MatCheckboxModule,
     MatButtonModule,

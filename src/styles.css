@@ -28,3 +28,7 @@ body {
 margin: 4vh 25vw 2vh 25vw;
 align-content: center;
 }
+
+input:focus {
+  outline: none !important;
+}
