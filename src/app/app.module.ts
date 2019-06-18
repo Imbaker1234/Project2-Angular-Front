@@ -12,6 +12,7 @@ import {CommonModule} from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
+import {ScrollDispatchModule, CdkScrollable, ScrollingModule} from '@angular/cdk/scrolling';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -45,11 +46,14 @@ import { ArtviewComponent } from './artview/artview.component';
 import { CommentComponent } from './comment/comment.component';
 import { CommentslistComponent } from './commentslist/commentslist.component';
 import { AboutComponent } from './about/about.component';
+import { CommentbuttonComponent } from './commentbutton/commentbutton.component';
+import { CommentlistcontainerComponent } from './commentlistcontainer/commentlistcontainer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    
     LoginViewComponent,
     SignInComponent,
     MainViewComponent,
@@ -59,12 +63,15 @@ import { AboutComponent } from './about/about.component';
     ArtviewComponent,
     CommentComponent,
     CommentslistComponent,
-    AboutComponent
+    AboutComponent,
+    CommentbuttonComponent,
+    CommentlistcontainerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     CommonModule,
+    ScrollingModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
