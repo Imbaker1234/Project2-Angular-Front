@@ -48,6 +48,13 @@ import { CommentslistComponent } from './commentslist/commentslist.component';
 import { AboutComponent } from './about/about.component';
 import { CommentbuttonComponent } from './commentbutton/commentbutton.component';
 import { CommentlistcontainerComponent } from './commentlistcontainer/commentlistcontainer.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { StumbleuponComponent } from './stumbleupon/stumbleupon.component';
+import { NewsComponent } from './news/news.component';
+import { ShowingsComponent } from './showings/showings.component';
+import { ShowingComponent } from './showing/showing.component';
+import { FavoriteArtComponent } from './favorite-art/favorite-art.component';
+import { ArtpieceComponent } from './artpiece/artpiece.component';
 
 
 @NgModule({
@@ -65,7 +72,14 @@ import { CommentlistcontainerComponent } from './commentlistcontainer/commentlis
     CommentslistComponent,
     AboutComponent,
     CommentbuttonComponent,
-    CommentlistcontainerComponent
+    CommentlistcontainerComponent,
+    UserDashboardComponent,
+    StumbleuponComponent,
+    NewsComponent,
+    ShowingsComponent,
+    ShowingComponent,
+    FavoriteArtComponent,
+    ArtpieceComponent
   ],
   imports: [
     BrowserModule,
