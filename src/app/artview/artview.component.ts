@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { MetAccessService } from '../met-access.service'
+import {Component, OnInit} from '@angular/core';
+import {MetAccessService} from '../met-access.service';
+import {Artmodel} from '../models/artmodel';
 
 @Component({
   selector: 'app-artview',
@@ -8,17 +9,42 @@ import { MetAccessService } from '../met-access.service'
 })
 export class ArtviewComponent implements OnInit {
 
-objectId: number;
-primaryImageSmall: string;
-artJSON;
+  private objectId: number;
+  private primaryImageSmall: string;
+  private artJSON: Artmodel;
+  private title: string;
+  private creditLine: string;
+  private artistName: string;
 
   constructor(private metAccesService: MetAccessService) {
-    this.artJSON = this.metAccesService.stumble();
-    console.log(this.artJSON);
-   }
+    this.loadArt();
+  }
+
+  ensureRetrievedValueHasPicture() {
+    for (let i = 0; i < 30; i++) {
+      console.log(i);
+      this.artJSON = this.metAccesService.stumble()[0];
+      if (this.primaryImageSmall === '') {
+        continue;
+      } else {
+        return;
+      }
+    }
+    alert('Service temporarily unavailable. Please try again later.');
+  }
+
+  loadArt() {
+    this.ensureRetrievedValueHasPicture();
+    this.objectId = this.artJSON[0].objectID;
+    this.primaryImageSmall = this.artJSON[0].primaryImageSmall;
+    this.title = this.artJSON.title;
+    this.creditLine = this.artJSON.creditLine;
+    this.artistName = this.artJSON.artistDisplayName;
+    console.log((this.artJSON));
+  }
 
   ngOnInit() {
-    
+
   }
 
 }
