@@ -1,5 +1,6 @@
 <mat-toolbar>
   <img src="../../assets/SWWA-icon.png">
+<<<<<<< HEAD
   Stuart's World
   <span class="spacer"></span>
   <mat-form-field>
@@ -9,4 +10,35 @@
     <input matInput placeholder="Password">
   </mat-form-field>
 
+=======
+  <h3>
+    Stuart's World
+  </h3>
+  <button color="primary" mat-mini-fab>
+    <mat-icon>home</mat-icon>
+  </button>
+
+  <button (click)="stumble()" color="primary" mat-mini-fab routerLink="artview">
+    <mat-icon>directions_run</mat-icon>
+  </button>
+
+  <span class="spacer"></span>
+
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Login
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <input class="lform" label="Username" matInput placeholder="Username"><br>
+      <input class="lform" label="Password" matInput placeholder="Password" type="password">
+      <button id="key" mat-raised-button>
+        <mat-icon>vpn_key</mat-icon>
+      </button>
+    </mat-expansion-panel>
+  </mat-accordion>
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 </mat-toolbar>

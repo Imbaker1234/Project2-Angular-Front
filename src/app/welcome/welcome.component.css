@@ -1,17 +1,37 @@
+<<<<<<< HEAD
 body, html {
   margin: 0;
   padding: 0;
+=======
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Mali|Pacifico&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100% !important;
+  overflow-x: hidden;
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 }
 
 .wrapper {
 
   height: 100vh;
 
+<<<<<<< HEAD
+=======
+  max-width: 100% !important;
+
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
   overflow-x: hidden;
 
   overflow-y: auto;
 
   perspective: 2px;
+<<<<<<< HEAD
+=======
+
+  background-color: #FDF5E6;
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 }
 
 .section {
@@ -19,6 +39,10 @@ body, html {
   position: relative;
 
   height: 100vh;
+<<<<<<< HEAD
+=======
+  width: 100vw;
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 
   display: flex;
   align-items: center;
@@ -26,7 +50,10 @@ body, html {
   color: #242424;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 .parallax::after {
 
   content: " ";
@@ -45,28 +72,90 @@ body, html {
 
 .static {
   background: oldlace;
+<<<<<<< HEAD
   height: 40vh;
+=======
+  height: 45vh;
+  width: 100vw;
+  align-content: center !important;
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 }
 
 .staticFirst {
   background: oldlace;
   height: 20vh;
+<<<<<<< HEAD
+=======
+  width: 100vw;
+  align-content: center !important;
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 }
 
 .bg1::after {
   background-image: url('../../assets/img1.jpg');
+<<<<<<< HEAD
+=======
+  background-repeat: no-repeat;
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 }
 
 .bg2::after {
   background-image: url('../../assets/img2.jpg');
+<<<<<<< HEAD
+=======
+  background-repeat: no-repeat;
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 }
 
 .bg3::after {
   background-image: url('../../assets/img3.jpg');
+<<<<<<< HEAD
+=======
+  background-repeat: no-repeat;
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 }
 
 .bg4::after {
   background-image: url('../../assets/img4.jpg');
 }
 
+<<<<<<< HEAD
+=======
+#delights {
+  font-family: Mali, cursive !important;
+}
+
+
+#delightscap {
+  color: gold;
+  font-weight: bold;
+}
+
+#inspires {
+  font-family: Pacifico, cursive !important;
+}
+
+#inspirescap {
+  color: dodgerblue;
+  font-weight: bold;
+}
+
+#amazes {
+  font-family: Lobster, cursive !important;
+}
+
+#amazescap {
+  color: firebrick;
+  font-weight: bold;
+}
+
+#ready {
+  font-family: 'Abril Fatface', cursive !important;
+}
+
+#readycap {
+  color: teal;
+  font-weight: bold;
+}
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 

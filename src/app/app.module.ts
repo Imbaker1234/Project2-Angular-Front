@@ -12,7 +12,10 @@ import {CommonModule} from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
+<<<<<<< HEAD
 import {ScrollDispatchModule, CdkScrollable, ScrollingModule} from '@angular/cdk/scrolling';
+=======
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -42,6 +45,7 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {RegisterComponent} from './register/register.component';
 import {WelcomeComponent} from './welcome/welcome.component';
+<<<<<<< HEAD
 import { ArtviewComponent } from './artview/artview.component';
 import { CommentComponent } from './comment/comment.component';
 import { CommentslistComponent } from './commentslist/commentslist.component';
@@ -56,12 +60,23 @@ import { ShowingComponent } from './showing/showing.component';
 import { FavoriteArtComponent } from './favorite-art/favorite-art.component';
 import { ArtpieceComponent } from './artpiece/artpiece.component';
 import { CarouselComponent } from './carousel/carousel.component';
+=======
+import {ArtviewComponent} from './artview/artview.component';
+import {CommentComponent} from './comment/comment.component';
+import {FavoriteArtComponent} from './favorite-art/favorite-art.component';
+import {HttpClientModule} from '@angular/common/http';
+import {RouterModule} from '@angular/router';
+import {AppRoutingModule} from './app-routing.module';
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 
 
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
     
+=======
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
     LoginViewComponent,
     SignInComponent,
     MainViewComponent,
@@ -70,6 +85,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     WelcomeComponent,
     ArtviewComponent,
     CommentComponent,
+<<<<<<< HEAD
     CommentslistComponent,
     AboutComponent,
     CommentbuttonComponent,
@@ -82,14 +98,25 @@ import { CarouselComponent } from './carousel/carousel.component';
     FavoriteArtComponent,
     ArtpieceComponent,
     CarouselComponent
+=======
+    FavoriteArtComponent
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
   ],
   imports: [
     BrowserModule,
     FormsModule,
     CommonModule,
+<<<<<<< HEAD
     ScrollingModule,
     BrowserModule,
     BrowserAnimationsModule,
+=======
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    RouterModule,
+    AppRoutingModule,
+>>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
     MatCheckboxModule,
     MatCheckboxModule,
     MatButtonModule,
