@@ -18,6 +18,8 @@ body {
   overflow-y: auto;
 
   perspective: 2px;
+
+  background-color: #FDF5E6;
 }
 
 .section {
@@ -65,14 +67,17 @@ body {
 
 .bg1::after {
   background-image: url('../../assets/img1.jpg');
+  background-repeat: no-repeat;
 }
 
 .bg2::after {
   background-image: url('../../assets/img2.jpg');
+  background-repeat: no-repeat;
 }
 
 .bg3::after {
   background-image: url('../../assets/img3.jpg');
+  background-repeat: no-repeat;
 }
 
 .bg4::after {
