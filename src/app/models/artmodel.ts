@@ -1,53 +1,5 @@
 export class Artmodel {
 
-  objectID: number;
-  isHighlight: boolean;
-  accessionNumber: any;
-  isPublicDomain: string;
-  primaryImage: string;
-  primaryImageSmall: string;
-  additionalImages: string[];
-  constituents: any;
-  department: string;
-  objectName: string;
   title: string;
-  culture: string;
-  period: any;
-  dynasty: any;
-  reign: any;
-  portfolio: any;
-  artistRole: any;
-  artistPrefix: string;
-  artistDisplayName: string;
-  artistDisplayBio: string;
-  artistSuffix: string;
-  artistAlphaSort: any;
-  artistNationality: string;
-  artistBeginDate: number;
-  artistEndDate: number;
-  objectDate: string;
-  objectBeginDate: number;
-  objectEndDate: number;
-  medium: string;
-  dimensions: string;
-  creditLine: string;
-  geographyType: string;
-  city: string;
-  state: string;
-  county: string;
-  country: string;
-  region: string;
-  subregion: string;
-  locale: string;
-  locus: any;
-  excavation: any;
-  river: string;
-  classification: string;
-  rightsAndReproduction: any;
-  linkResource: any;
-  metadataDate: any;
-  repository: string;
-  objectURL: string;
-  tags: string[];
 
 }

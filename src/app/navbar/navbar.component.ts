@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {MetAccessService} from '../met-access.service';
-import {Artmodel} from '../models/artmodel';
 
 @Component({
   selector: 'app-navbar',
@@ -17,8 +16,10 @@ export class NavbarComponent implements OnInit {
   }
 
   stumble() {
-    const myArtModel: Artmodel[] = this.metAccessService.stumble();
-    console.log('TITLE: ' + myArtModel[0].title + '\n' +
-      'URL: ' + myArtModel[0].primaryImageSmall);
+    // const myArtModel: Artmodel[] = this.metAccessService.stumble();
+    // console.log('TITLE: ' + myArtModel[0].title + '\n' +
+    //   'URL: ' + myArtModel[0].primaryImageSmall);
+
+    this.metAccessService.harvardSampleRequest();
   }
 }

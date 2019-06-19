@@ -4,11 +4,14 @@ import {map} from 'rxjs/operators';
 
 import {Artmodel} from './models/artmodel';
 
+declare var $: any;
+
 @Injectable({
   providedIn: 'root'
 })
 export class MetAccessService {
-
+  harvardKey = '79371960-9294-11e9-9dbd-c19aaf23e283';
+  harvardRequest = 'https://api.harvardartmuseums.org/RESOURCE_TYPE?apikey=' + this.harvardKey;
   metURL = 'https://collectionapi.metmuseum.org/public/collection/v1/objects/';
 
   payLoad: Artmodel[] = [];
@@ -25,24 +28,31 @@ export class MetAccessService {
       });
   }
 
-  // doGet() {
-  //   this.http
-  //     .get<{ [key: string]: Artmodel }>('https://jsonplaceholder.typicode.com/posts/12')
-  //     .pipe(map(responseData => {
-  //       consnt myDataNodes: Artmodel[] = [];
-  //       for (const key in responseData) {
-  //         if (responseData.hasOwnProperty(key)) {
-  //           myDataNodes.push({body: '', id: 0, title: '', userId: 0, ...responseData});
-  //         }
-  //         return myDataNodes;
-  //       }
-  //     }))
-  //     .subscribe(myData => {
-  //       this.payLoad = myData;
-  //       console.log(this.payLoad[0].title);
-  //     });
-  // }
+  // Harvard Sample Request
 
+  harvardSampleRequest() {
+// Find all of the objects that are paintings and have the word "rabbit" in the title
+    const apiEndpointBaseURL = 'https://api.harvardartmuseums.org/object';
+    const queryString = $.param({
+      apikey: this.harvardKey,
+      title: 'warrior',
+      classification: 'Paintings',
+      fields: 'objectnumber,title,images'
+    });
+
+    $.getJSON(apiEndpointBaseURL + '?' + queryString, function(data) {
+      console.log('harvardSampleRequest called!');
+      /* Data - The JSON response data.
+         Records - Array of Individual pieces of art
+         Images - Array of image related fields.
+         baseimageurl - The image url we want to apply.
+
+         ex. data.records[2].images[0].baseimageurl
+       */
+
+      console.log(data.records[2].images[0].baseimageurl);
+    });
+  }
   // Specifying the method and more importantly its return type
   // for use within our component from which this method will be
   // called.
