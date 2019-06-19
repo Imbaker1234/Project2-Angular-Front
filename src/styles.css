@@ -2,26 +2,19 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-<<<<<<< HEAD
 html, body { height: 100%; }
-=======
+
 html, body {
   height: 100%;
   max-width: 100%;
   overflow-x: hidden;
 }
->>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-<<<<<<< HEAD
   background-color: white;
     overflow-x: hidden;
-=======
-  background-color: #242424;
-  overflow-x: hidden;
->>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 }
 
 ::-webkit-scrollbar {
@@ -36,12 +29,9 @@ body {
 #compbody {
 margin: 4vh 25vw 2vh 25vw;
 align-content: center;
-<<<<<<< HEAD
 }
-=======
-}
+
 
 input:focus {
   outline: none !important;
 }
->>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32

@@ -12,10 +12,6 @@ import {CommonModule} from '@angular/common';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
-<<<<<<< HEAD
-import {ScrollDispatchModule, CdkScrollable, ScrollingModule} from '@angular/cdk/scrolling';
-=======
->>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -45,38 +41,29 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {RegisterComponent} from './register/register.component';
 import {WelcomeComponent} from './welcome/welcome.component';
-<<<<<<< HEAD
-import { ArtviewComponent } from './artview/artview.component';
-import { CommentComponent } from './comment/comment.component';
-import { CommentslistComponent } from './commentslist/commentslist.component';
-import { AboutComponent } from './about/about.component';
-import { CommentbuttonComponent } from './commentbutton/commentbutton.component';
-import { CommentlistcontainerComponent } from './commentlistcontainer/commentlistcontainer.component';
-import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
-import { StumbleuponComponent } from './stumbleupon/stumbleupon.component';
-import { NewsComponent } from './news/news.component';
-import { ShowingsComponent } from './showings/showings.component';
-import { ShowingComponent } from './showing/showing.component';
-import { FavoriteArtComponent } from './favorite-art/favorite-art.component';
-import { ArtpieceComponent } from './artpiece/artpiece.component';
-import { CarouselComponent } from './carousel/carousel.component';
-=======
 import {ArtviewComponent} from './artview/artview.component';
 import {CommentComponent} from './comment/comment.component';
+import {CommentslistComponent} from './commentslist/commentslist.component';
+import {AboutComponent} from './about/about.component';
+import {CommentbuttonComponent} from './commentbutton/commentbutton.component';
+import {CommentlistcontainerComponent} from './commentlistcontainer/commentlistcontainer.component';
+import {UserDashboardComponent} from './user-dashboard/user-dashboard.component';
+import {StumbleuponComponent} from './stumbleupon/stumbleupon.component';
+import {NewsComponent} from './news/news.component';
+import {ShowingsComponent} from './showings/showings.component';
+import {ShowingComponent} from './showing/showing.component';
 import {FavoriteArtComponent} from './favorite-art/favorite-art.component';
+import {ArtpieceComponent} from './artpiece/artpiece.component';
+import {CarouselComponent} from './carousel/carousel.component';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
->>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-    
-=======
->>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
     LoginViewComponent,
     SignInComponent,
     MainViewComponent,
@@ -85,7 +72,6 @@ import {AppRoutingModule} from './app-routing.module';
     WelcomeComponent,
     ArtviewComponent,
     CommentComponent,
-<<<<<<< HEAD
     CommentslistComponent,
     AboutComponent,
     CommentbuttonComponent,
@@ -97,26 +83,20 @@ import {AppRoutingModule} from './app-routing.module';
     ShowingComponent,
     FavoriteArtComponent,
     ArtpieceComponent,
-    CarouselComponent
-=======
-    FavoriteArtComponent
->>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
-  ],
+    CarouselComponent,
+    FavoriteArtComponent],
   imports: [
     BrowserModule,
     FormsModule,
     CommonModule,
-<<<<<<< HEAD
     ScrollingModule,
     BrowserModule,
     BrowserAnimationsModule,
-=======
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule,
     AppRoutingModule,
->>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
     MatCheckboxModule,
     MatCheckboxModule,
     MatButtonModule,

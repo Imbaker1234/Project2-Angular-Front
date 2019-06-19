@@ -11,19 +11,13 @@ nav {
 }
 
 mat-form-field {
-<<<<<<< HEAD
   padding-right: 5px;
-=======
-  padding-right: 20px;
->>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32
 }
 
 img {
   height: 5vh;
   padding-right: 15px;
 }
-<<<<<<< HEAD
-=======
 
 h3 {
   padding-right: 2%;
@@ -43,4 +37,3 @@ h3 {
 button {
   margin: 0px .5% .5% .5%;
 }
->>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32

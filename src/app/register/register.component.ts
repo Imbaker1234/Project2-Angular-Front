@@ -22,15 +22,11 @@ export class RegisterComponent implements OnInit {
   reviewDetails = false;
 
   show = false;
-<<<<<<< HEAD:src/app/register/register.component.ts
-=======
   reviewCardEffect = 'container animated fadeIn';
->>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32:src/app/register/register.component.ts
 
   constructor(private fb: FormBuilder) {
   }
 
-<<<<<<< HEAD:src/app/register/register.component.ts
   get stateName() {
     console.log('get stateName() called');
     return this.show ? 'show' : 'hide';
@@ -40,8 +36,6 @@ export class RegisterComponent implements OnInit {
     console.log('toggle() called.');
     this.show = !this.show;
   }
-=======
->>>>>>> e6f9891a7c7ba576d5156c7f695848312ade7c32:src/app/register/register.component.ts
 
   ngOnInit() {
     this.firstFormGroup = this.fb.group({
