@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MetAccessService } from '../met-access.service'
 
 @Component({
   selector: 'app-artview',
@@ -7,12 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtviewComponent implements OnInit {
 
-images=["a","b","c","d","e","f"];
+objectId: number;
+primaryImageSmall: string;
 
 
-  constructor() { }
+  constructor(private metAccesService: MetAccessService) { }
 
   ngOnInit() {
+    
   }
 
 }
+
+/* Pass value of object id to constructor for the Artview
+
+Use MAS - met access servies. Make a request to our API using one of the already provided methods
+
+Add all necessary key value pairs above constructor so that artview will populate the necessary material
+
+Align names of art with that of the API
+
+Assign values from API to variables
+
+Assign property binding and interpolation to the necessary fields in the art view - ex. [img]="picture url from API here"
+
+Remove all work-inappropriate content */

@@ -48,6 +48,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 
+import { ImageService } from './image.service'
 
 @NgModule({
   declarations: [
@@ -104,7 +105,7 @@ import {AppRoutingModule} from './app-routing.module';
     MatPaginatorModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
