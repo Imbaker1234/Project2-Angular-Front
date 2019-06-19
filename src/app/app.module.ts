@@ -55,6 +55,7 @@ import { ShowingsComponent } from './showings/showings.component';
 import { ShowingComponent } from './showing/showing.component';
 import { FavoriteArtComponent } from './favorite-art/favorite-art.component';
 import { ArtpieceComponent } from './artpiece/artpiece.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 @NgModule({
@@ -79,7 +80,8 @@ import { ArtpieceComponent } from './artpiece/artpiece.component';
     ShowingsComponent,
     ShowingComponent,
     FavoriteArtComponent,
-    ArtpieceComponent
+    ArtpieceComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
