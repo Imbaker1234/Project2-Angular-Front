@@ -60,8 +60,6 @@ import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 
-import { ImageService } from './image.service'
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -131,7 +129,7 @@ import { ImageService } from './image.service'
     MatPaginatorModule,
     ReactiveFormsModule
   ],
-  providers: [ImageService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

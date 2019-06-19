@@ -11,16 +11,17 @@ export class MetAccessService {
   constructor(private http: HttpClient) {
   }
 
-  getArtByID(id: number) {
-    this.http.get(
-      '' + this.metURL + id
+  getArtByID(id: number): JSON {
+    const requestURL = this.metURL + id;
+    console.log("This was the URL that was queried for:\n" + requestURL);
+    this.http.get(requestURL
     ).subscribe(responseData => {
-      console.log(responseData);
+      return responseData;
     });
+    return null;
   }
 
-  stumble() {
-
-    this.getArtByID(Math.floor(Math.random() * (+420000 - +1)) + +1);
+  stumble(): JSON {
+   return this.getArtByID(Math.floor(Math.random() * (+420000 - +1)) + +1);
   }
 }

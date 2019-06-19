@@ -10,9 +10,12 @@ export class ArtviewComponent implements OnInit {
 
 objectId: number;
 primaryImageSmall: string;
+artJSON;
 
-
-  constructor(private metAccesService: MetAccessService) { }
+  constructor(private metAccesService: MetAccessService) {
+    this.artJSON = this.metAccesService.stumble();
+    console.log(this.artJSON);
+   }
 
   ngOnInit() {
     
