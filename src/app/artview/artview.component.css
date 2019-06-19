@@ -1,5 +1,6 @@
-#compbody { 
+#compbody {
     height: 90vh;
+    width: 75vw;
     width: 55vw;
     overflow-x: hidden;
     overflow-y: scroll;

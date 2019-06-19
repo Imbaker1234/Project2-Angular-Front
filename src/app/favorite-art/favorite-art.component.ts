@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-favorite-art',
@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoriteArtComponent implements OnInit {
 
-art = [1,2,3,4,5];
-
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

@@ -27,6 +27,15 @@ export class RegisterComponent implements OnInit {
   constructor(private fb: FormBuilder) {
   }
 
+  get stateName() {
+    console.log('get stateName() called');
+    return this.show ? 'show' : 'hide';
+  }
+
+  toggle() {
+    console.log('toggle() called.');
+    this.show = !this.show;
+  }
 
   ngOnInit() {
     this.firstFormGroup = this.fb.group({

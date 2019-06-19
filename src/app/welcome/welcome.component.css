@@ -10,7 +10,6 @@ body {
 .wrapper {
 
   height: 100vh;
-
   max-width: 100% !important;
 
   overflow-x: hidden;
@@ -18,7 +17,6 @@ body {
   overflow-y: auto;
 
   perspective: 2px;
-
   background-color: #FDF5E6;
 }
 
@@ -53,7 +51,7 @@ body {
 
 .static {
   background: oldlace;
-  height: 45vh;
+  height: 42vh;
   width: 100vw;
   align-content: center !important;
 }
@@ -120,4 +118,3 @@ body {
   color: teal;
   font-weight: bold;
 }
-

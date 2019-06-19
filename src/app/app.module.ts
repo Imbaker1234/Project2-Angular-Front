@@ -43,10 +43,22 @@ import {RegisterComponent} from './register/register.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {ArtviewComponent} from './artview/artview.component';
 import {CommentComponent} from './comment/comment.component';
+import {CommentslistComponent} from './commentslist/commentslist.component';
+import {AboutComponent} from './about/about.component';
+import {CommentbuttonComponent} from './commentbutton/commentbutton.component';
+import {CommentlistcontainerComponent} from './commentlistcontainer/commentlistcontainer.component';
+import {UserDashboardComponent} from './user-dashboard/user-dashboard.component';
+import {StumbleuponComponent} from './stumbleupon/stumbleupon.component';
+import {NewsComponent} from './news/news.component';
+import {ShowingsComponent} from './showings/showings.component';
+import {ShowingComponent} from './showing/showing.component';
 import {FavoriteArtComponent} from './favorite-art/favorite-art.component';
+import {ArtpieceComponent} from './artpiece/artpiece.component';
+import {CarouselComponent} from './carousel/carousel.component';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 import { ImageService } from './image.service'
 
@@ -61,12 +73,26 @@ import { ImageService } from './image.service'
     WelcomeComponent,
     ArtviewComponent,
     CommentComponent,
-    FavoriteArtComponent
-  ],
+    CommentslistComponent,
+    AboutComponent,
+    CommentbuttonComponent,
+    CommentlistcontainerComponent,
+    UserDashboardComponent,
+    StumbleuponComponent,
+    NewsComponent,
+    ShowingsComponent,
+    ShowingComponent,
+    FavoriteArtComponent,
+    ArtpieceComponent,
+    CarouselComponent,
+    FavoriteArtComponent],
   imports: [
     BrowserModule,
     FormsModule,
     CommonModule,
+    ScrollingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
