@@ -1,19 +1,20 @@
 <mat-card id="compbody" style="margin: 3% 10% 2% 12%;">
-        <div class="row align-items-start">
-    <div class="col-2">
-        <div style="overflow-y: scroll; height: 45vh; width: 100%;">
-            <app-news></app-news>
+    <div class="row align-items-start">
+        <div class="col-3">
+            <div style="overflow-y: scroll; height: 45vh; width: 100%;">
+                <app-news></app-news>
+            </div>
+            <br/><br/>
+            <div style="overflow-y: scroll; height: 45vh; width: 100%;">
+                <app-showings></app-showings>
+            </div>
         </div>
-        <div style="overflow-y: scroll; height: 45vh; width: 100%;">
-            <app-showings></app-showings>
+
+        <div class="col-8" style="overflow-x: default; overflow-y: scroll; height: 90vh; width: 67%;">
+            <app-favorite-art></app-favorite-art>
         </div>
-    </div>
-    
-    <div class="col-8" style="overflow-x: default; overflow-y: scroll; height: 90vh; width: 67%;">
-        <app-favorite-art></app-favorite-art>
-    </div>
-    <div class="col-2">
-    <app-stumbleupon></app-stumbleupon>
-    </div>
+        <div class="col-1">
+            <app-stumbleupon></app-stumbleupon>
+        </div>
     </div>
 </mat-card>
