@@ -14,6 +14,8 @@ export class NavbarComponent implements OnInit {
   loginValid: false;
   artPiece: ArtModel;
   searchId: number;
+  lFormLogin: string;
+  lFormPassword: string;
 
   constructor(private harvardAccessService: HarvardAccessService, private authService: AuthService, private stateService: StateService) {
   }
@@ -44,18 +46,20 @@ export class NavbarComponent implements OnInit {
   }
 
   submitLogin() {
-    this.authService.loginUser().subscribe(
+    this.authService.loginUser(this.lFormLogin, this.lFormPassword).subscribe(
       returnVar => {
 
         this.stateService.activeUser = new User(
-
+          returnVar.username,
+          returnVar.password,
+          returnVar.firstName,
+          returnVar.lastName,
+          returnVar.email
         );
       },
       error => {
         console.error(error);
       }
     );
-
-    console.log(this.artPiece);
   }
 }

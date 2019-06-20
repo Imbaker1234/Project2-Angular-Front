@@ -20,8 +20,9 @@
 
   <span class="spacer"></span>
 
-  <input class="lform" id="lform-login" label="Username" matInput placeholder="Username"><br>
-  <input class="lform" id="lform-password" label="Password" matInput placeholder="Password" type="password">
+  <input [(ngModel)]="lFormLogin" class="lform" id="lform-login" label="Username" matInput placeholder="Username"><br>
+  <input [(ngModel)]="lFormPassword" class="lform" id="lform-password" label="Password" matInput placeholder="Password"
+         type="password">
   <button (click)="submitLogin()" id="key" mat-raised-button>
     <mat-icon>vpn_key</mat-icon>
   </button>
