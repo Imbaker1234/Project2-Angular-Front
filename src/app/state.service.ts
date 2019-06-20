@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {User} from './models/user';
+import {ArtModel} from './art-model';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,7 @@ import {User} from './models/user';
 export class StateService {
 
   activeUser: User;
+  activeArt: ArtModel;
 
   constructor() {
   }
