@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {MetAccessService} from '../met-access.service';
+import {HarvardAccessService} from '../harvard-access.service';
+import {ArtModel} from '../art-model';
 
 @Component({
   selector: 'app-navbar',
@@ -8,18 +9,32 @@ import {MetAccessService} from '../met-access.service';
 })
 export class NavbarComponent implements OnInit {
   loginValid: false;
+  artPiece: ArtModel;
 
-  constructor(private metAccessService: MetAccessService) {
+  constructor(private harvardAccessService: HarvardAccessService) {
   }
 
   ngOnInit() {
   }
 
-  stumble() {
-    // const myArtModel: Artmodel[] = this.metAccessService.stumble();
-    // console.log('TITLE: ' + myArtModel[0].title + '\n' +
-    //   'URL: ' + myArtModel[0].primaryImageSmall);
+  // stumble() {
+  //   this.harvardAccessService.stumble();
+  // }
 
-    this.metAccessService.harvardSampleRequest();
+  search() {
+    this.harvardAccessService.getById(4120).subscribe(
+      returnVar => {
+
+        this.artPiece = new ArtModel(
+          returnVar.id,
+          returnVar.baseimageurl
+        );
+      },
+      error => {
+        console.error(error);
+      }
+    );
+
+    console.log(this.artPiece);
   }
 }

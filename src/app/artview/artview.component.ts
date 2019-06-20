@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {MetAccessService} from '../met-access.service';
-import {Artmodel} from '../models/artmodel';
+import {ArtModel} from '../art-model';
+import {HarvardAccessService} from '../harvard-access.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-artview',
@@ -9,38 +10,9 @@ import {Artmodel} from '../models/artmodel';
 })
 export class ArtviewComponent implements OnInit {
 
-  private objectId: number;
-  private primaryImageSmall: string;
-  private artJSON: Artmodel;
-  private title: string;
-  private creditLine: string;
-  private artistName: string;
+  avSource: Observable<ArtModel[]>;
 
-  constructor(private metAccesService: MetAccessService) {
-    this.loadArt();
-  }
-
-  ensureRetrievedValueHasPicture() {
-    for (let i = 0; i < 30; i++) {
-      console.log(i);
-      this.artJSON = this.metAccesService.stumble()[0];
-      if (this.primaryImageSmall === '') {
-        continue;
-      } else {
-        return;
-      }
-    }
-    alert('Service temporarily unavailable. Please try again later.');
-  }
-
-  loadArt() {
-    this.ensureRetrievedValueHasPicture();
-    this.objectId = this.artJSON[0].objectID;
-    this.primaryImageSmall = this.artJSON[0].primaryImageSmall;
-    this.title = this.artJSON.title;
-    this.creditLine = this.artJSON.creditLine;
-    this.artistName = this.artJSON.artistDisplayName;
-    console.log((this.artJSON));
+  constructor(private harvardAccessService: HarvardAccessService) {
   }
 
   ngOnInit() {
