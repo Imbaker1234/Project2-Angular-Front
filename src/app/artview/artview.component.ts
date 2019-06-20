@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ArtModel} from '../art-model';
 import {HarvardAccessService} from '../harvard-access.service';
-import {Observable} from 'rxjs';
+import {StateService} from '../state.service';
 
 @Component({
   selector: 'app-artview',
@@ -10,9 +9,12 @@ import {Observable} from 'rxjs';
 })
 export class ArtviewComponent implements OnInit {
 
-  avSource: Observable<ArtModel[]>;
+  shownArtId: number;
+  shownArtURL: string;
 
-  constructor(private harvardAccessService: HarvardAccessService) {
+  constructor(private harvardAccessService: HarvardAccessService, stateService: StateService) {
+    this.shownArtId = stateService.activeArt.id;
+    this.shownArtURL = stateService.activeArt.baseimageurl;
   }
 
   ngOnInit() {

@@ -24,7 +24,8 @@ export class HarvardAccessService {
     console.log('Harvard-Access-Service.getById(' + id + ')');
     // This is just waiting to receive the specified object in the brackets. Returning it once
     // it has it. (See Navbar for further demo)
-    return this.http.get<ArtModel[]>(this.urlBase + id + this.apiParam + this.harvardKey);
+    return this.http.get<ArtModel>(this.urlBase + id + this.apiParam + this.harvardKey);
   }
+
 
 }

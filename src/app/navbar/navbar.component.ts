@@ -23,14 +23,18 @@ export class NavbarComponent implements OnInit {
   }
 
   search() {
-    this.harvardAccessService.getById(this.searchId).subscribe();
-
-    console.log(this.artPiece);
+    this.harvardAccessService.getById(this.searchId).subscribe(
+      inc => {
+        this.stateService.activeArt = inc;
+      });
   }
 
   stumble() {
     const rando = (Math.floor(Math.random() * 200000) + 1);
-    this.harvardAccessService.getById(rando);
+    this.harvardAccessService.getById(rando).subscribe(
+      inc => {
+        this.stateService.activeArt = inc;
+      });
   }
 
   submitLogin() {
