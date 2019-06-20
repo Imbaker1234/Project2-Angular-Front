@@ -11,7 +11,6 @@ import {User} from '../models/user';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  loginValid: false;
   artPiece: ArtModel;
   searchId: number;
   lFormLogin: string;
@@ -25,37 +24,30 @@ export class NavbarComponent implements OnInit {
 
   search() {
     this.harvardAccessService.getById(this.searchId).subscribe(
-      returnVar => {
-
-        this.artPiece = new ArtModel(
-          returnVar.id,
-          returnVar.baseimageurl
-        );
-      },
-      error => {
-        console.error(error);
-      }
-    );
-
-    console.log(this.artPiece);
+      inc => {
+        this.stateService.artSubject = inc;
+      });
   }
 
   stumble() {
     const rando = (Math.floor(Math.random() * 200000) + 1);
-    this.harvardAccessService.getById(rando);
+    this.harvardAccessService.getById(rando).subscribe(
+      inc => {
+        this.stateService.artSubject = inc;
+      });
   }
 
   submitLogin() {
     this.authService.loginUser(this.lFormLogin, this.lFormPassword).subscribe(
       returnVar => {
 
-        this.stateService.activeUser = new User(
+        this.stateService.updateUserSubject(new User(
           returnVar.username,
           returnVar.password,
           returnVar.firstName,
           returnVar.lastName,
           returnVar.email
-        );
+        ));
       },
       error => {
         console.error(error);
