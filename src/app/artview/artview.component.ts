@@ -12,9 +12,12 @@ export class ArtviewComponent implements OnInit {
   shownArtId: number;
   shownArtURL: string;
 
-  constructor(private harvardAccessService: HarvardAccessService, stateService: StateService) {
-    this.shownArtId = stateService.activeArt.id;
-    this.shownArtURL = stateService.activeArt.baseimageurl;
+  constructor(private harvardAccessService: HarvardAccessService, private stateService: StateService) {
+    this.stateService.artSubject$.subscribe(
+      data => {
+        this.shownArtURL = data.baseimageurl;
+      }
+    );
   }
 
   ngOnInit() {

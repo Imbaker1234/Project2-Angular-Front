@@ -5,7 +5,8 @@
       <div class="col-8">
 
         <div class="flex-column" id="imageContent" id="artview-scrollingbody">
-          <img [src]="this.shownArtURL" height=50%; id="artViewArtImage"
+          <img *ngIf="this.stateService.artSubject$ | async" height=50%; id="artViewArtImage"
+               src="{{shownArtURL}}"
                style="padding: 5px 0px 0px 45px;">
         </div>
         <div class="flex-column" id="textContent">

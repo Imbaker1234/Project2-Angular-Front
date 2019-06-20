@@ -25,7 +25,7 @@ export class NavbarComponent implements OnInit {
   search() {
     this.harvardAccessService.getById(this.searchId).subscribe(
       inc => {
-        this.stateService.activeArt = inc;
+        this.stateService.artSubject = inc;
       });
   }
 
@@ -33,7 +33,7 @@ export class NavbarComponent implements OnInit {
     const rando = (Math.floor(Math.random() * 200000) + 1);
     this.harvardAccessService.getById(rando).subscribe(
       inc => {
-        this.stateService.activeArt = inc;
+        this.stateService.artSubject = inc;
       });
   }
 
@@ -41,13 +41,13 @@ export class NavbarComponent implements OnInit {
     this.authService.loginUser(this.lFormLogin, this.lFormPassword).subscribe(
       returnVar => {
 
-        this.stateService.activeUser = new User(
+        this.stateService.updateUserSubject(new User(
           returnVar.username,
           returnVar.password,
           returnVar.firstName,
           returnVar.lastName,
           returnVar.email
-        );
+        ));
       },
       error => {
         console.error(error);
