@@ -7,30 +7,22 @@
     <mat-icon>home</mat-icon>
   </button>
 
-  <!--  <button (click)="stumble()" color="primary" mat-mini-fab routerLink="artview">-->
-  <!--    <mat-icon>directions_run</mat-icon>-->
-  <!--  </button>-->
+  <input class="lform" id="sform-search" label="Username" matInput placeholder="ArtId">
+
+
+  <button (click)="stumble()" color="primary" mat-mini-fab routerLink="artview">
+    <mat-icon>directions_run</mat-icon>
+  </button>
 
   <button (click)="search()" color="primary" mat-mini-fab routerLink="artview">
-    <mat-icon>directions_run</mat-icon>
+    <mat-icon>image_search</mat-icon>
   </button>
 
   <span class="spacer"></span>
 
-  <mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Login
-        </mat-panel-title>
-        <mat-panel-description>
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <input class="lform" label="Username" matInput placeholder="Username"><br>
-      <input class="lform" label="Password" matInput placeholder="Password" type="password">
-      <button id="key" mat-raised-button>
-        <mat-icon>vpn_key</mat-icon>
-      </button>
-    </mat-expansion-panel>
-  </mat-accordion>
+  <input class="lform" id="lform-login" label="Username" matInput placeholder="Username"><br>
+  <input class="lform" id="lform-password" label="Password" matInput placeholder="Password" type="password">
+  <button (click)="submitLogin()" id="key" mat-raised-button>
+    <mat-icon>vpn_key</mat-icon>
+  </button>
 </mat-toolbar>

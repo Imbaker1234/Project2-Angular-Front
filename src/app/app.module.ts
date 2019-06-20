@@ -61,6 +61,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { ArticlesComponent } from './articles/articles.component';
 import { MediumsComponent } from './mediums/mediums.component';
+import { NewsCarouselComponent } from './news-carousel/news-carousel.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +88,8 @@ import { MediumsComponent } from './mediums/mediums.component';
     CarouselComponent,
     FavoriteArtComponent,
     ArticlesComponent,
-    MediumsComponent],
+    MediumsComponent,
+    NewsCarouselComponent],
   imports: [
     BrowserModule,
     FormsModule,
