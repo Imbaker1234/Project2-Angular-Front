@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HarvardAccessService} from '../harvard-access.service';
 import {ArtModel} from '../art-model';
+import {AuthService} from '../auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,15 +12,11 @@ export class NavbarComponent implements OnInit {
   loginValid: false;
   artPiece: ArtModel;
 
-  constructor(private harvardAccessService: HarvardAccessService) {
+  constructor(private harvardAccessService: HarvardAccessService, authService: AuthService) {
   }
 
   ngOnInit() {
   }
-
-  // stumble() {
-  //   this.harvardAccessService.stumble();
-  // }
 
   search() {
     this.harvardAccessService.getById(4120).subscribe(
@@ -36,5 +33,13 @@ export class NavbarComponent implements OnInit {
     );
 
     console.log(this.artPiece);
+  }
+
+  stumble() {
+
+  }
+
+  submitLogin() {
+
   }
 }

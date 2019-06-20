@@ -25,15 +25,20 @@ h3 {
 
 
 .lform {
-  margin: 2% 5% 0% 0%;
-  width: 70%;
+  margin: 2% 5% 1% 0%;
+  width: 15%;
 }
 
 #key {
-  margin: 0 5% 0% 5%;
+  margin: 0 2% 0% 0%;
   padding: 0 0 0 0;
 }
 
 button {
   margin: 0px .5% .5% .5%;
+}
+
+#sform-search {
+  width: 5%;
+  margin: 0% 5%;
 }
