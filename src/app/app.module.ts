@@ -59,6 +59,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {ScrollingModule} from '@angular/cdk/scrolling';
+import { ArticlesComponent } from './articles/articles.component';
+import { MediumsComponent } from './mediums/mediums.component';
+import { NewsCarouselComponent } from './news-carousel/news-carousel.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +86,10 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
     FavoriteArtComponent,
     ArtpieceComponent,
     CarouselComponent,
-    FavoriteArtComponent],
+    FavoriteArtComponent,
+    ArticlesComponent,
+    MediumsComponent,
+    NewsCarouselComponent],
   imports: [
     BrowserModule,
     FormsModule,
