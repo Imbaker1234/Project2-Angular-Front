@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body { height: 100%; }
+
+html, body {
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: white;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  color: transparent;
+}
+
+#not-nav {
+  margin-top: .1vh;
+}
+
+#compbody {
+margin: 4vh 25vw 2vh 25vw;
+align-content: center;
+}
+
+
+input:focus {
+  outline: none !important;
+}

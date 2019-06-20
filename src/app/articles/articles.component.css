@@ -1,0 +1,9 @@
+.article{
+    background-color: lightslategray;
+    border: 6rem 10rem;
+    padding: 3rem 5rem; 
+}
+
+h1, h5 {
+    text-align: center;
+}

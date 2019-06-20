@@ -1,3 +1,28 @@
-<p>
-  navbar works!
-</p>
+<mat-toolbar>
+  <img src="../../assets/SWWA-icon.png" routerLink="welcome">
+  <h3>
+    Stuart's World
+  </h3>
+  <button (click)="search()" color="primary" mat-mini-fab routerLink="main-view">
+    <mat-icon>home</mat-icon>
+  </button>
+
+  <input class="lform" id="sform-search" label="Username" matInput placeholder="ArtId">
+
+
+  <button (click)="stumble()" color="primary" mat-mini-fab routerLink="artview">
+    <mat-icon>directions_run</mat-icon>
+  </button>
+
+  <button (click)="search()" color="primary" mat-mini-fab routerLink="artview">
+    <mat-icon>image_search</mat-icon>
+  </button>
+
+  <span class="spacer"></span>
+
+  <input class="lform" id="lform-login" label="Username" matInput placeholder="Username"><br>
+  <input class="lform" id="lform-password" label="Password" matInput placeholder="Password" type="password">
+  <button (click)="submitLogin()" id="key" mat-raised-button>
+    <mat-icon>vpn_key</mat-icon>
+  </button>
+</mat-toolbar>

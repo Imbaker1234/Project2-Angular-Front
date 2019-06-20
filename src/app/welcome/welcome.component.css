@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Mali|Pacifico&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100% !important;
+  overflow-x: hidden;
+}
+
+.wrapper {
+
+  height: 100vh;
+  max-width: 100% !important;
+
+  overflow-x: hidden;
+
+  overflow-y: auto;
+
+  perspective: 2px;
+  background-color: #FDF5E6;
+}
+
+.section {
+
+  position: relative;
+
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #242424;
+}
+
+.parallax::after {
+
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  transform: translateZ(-1px) scale(1.5);
+
+  background-size: 100%;
+
+  z-index: -1;
+}
+
+.static {
+  background: oldlace;
+  height: 42vh;
+  width: 100vw;
+  align-content: center !important;
+}
+
+.staticFirst {
+  background: oldlace;
+  height: 20vh;
+  width: 100vw;
+  align-content: center !important;
+}
+
+.bg1::after {
+  background-image: url('../../assets/img1.jpg');
+  background-repeat: no-repeat;
+}
+
+.bg2::after {
+  background-image: url('../../assets/img2.jpg');
+  background-repeat: no-repeat;
+}
+
+.bg3::after {
+  background-image: url('../../assets/img3.jpg');
+  background-repeat: no-repeat;
+}
+
+.bg4::after {
+  background-image: url('../../assets/img4.jpg');
+}
+
+#delights {
+  font-family: Mali, cursive !important;
+}
+
+
+#delightscap {
+  color: gold;
+  font-weight: bold;
+}
+
+#inspires {
+  font-family: Pacifico, cursive !important;
+}
+
+#inspirescap {
+  color: dodgerblue;
+  font-weight: bold;
+}
+
+#amazes {
+  font-family: Lobster, cursive !important;
+}
+
+#amazescap {
+  color: firebrick;
+  font-weight: bold;
+}
+
+#ready {
+  font-family: 'Abril Fatface', cursive !important;
+}
+
+#readycap {
+  color: teal;
+  font-weight: bold;
+}

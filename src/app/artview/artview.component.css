@@ -1,0 +1,14 @@
+#compbody {
+    height: 90vh;
+    width: 75vw;
+    width: 55vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 10px;
+    border: 1px solid #3B4045;
+    box-shadow:  -1px 1px #3B4045,
+         -2px 2px #3B4045,
+         -3px 3px #3B4045,
+         -4px 4px #3B4045,
+         -5px 5px #3B4045;
+}
