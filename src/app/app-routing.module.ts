@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent },
   { path: 'main-view', component: MainViewComponent },
   { path: 'artview', component: ArtviewComponent},
-  { path: '', redirectTo: '/main-view', pathMatch: 'full' }
+  { path: '', redirectTo: '/welcome', pathMatch: 'full' }
 ];
 
 @NgModule({
