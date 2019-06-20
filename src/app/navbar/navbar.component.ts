@@ -11,7 +11,6 @@ import {User} from '../models/user';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  loginValid: false;
   artPiece: ArtModel;
   searchId: number;
   lFormLogin: string;
@@ -24,18 +23,7 @@ export class NavbarComponent implements OnInit {
   }
 
   search() {
-    this.harvardAccessService.getById(this.searchId).subscribe(
-      returnVar => {
-
-        this.artPiece = new ArtModel(
-          returnVar.id,
-          returnVar.baseimageurl
-        );
-      },
-      error => {
-        console.error(error);
-      }
-    );
+    this.harvardAccessService.getById(this.searchId).subscribe();
 
     console.log(this.artPiece);
   }
