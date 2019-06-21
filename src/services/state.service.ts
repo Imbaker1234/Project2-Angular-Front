@@ -41,4 +41,9 @@ export class StateService {
     this.artSubject.next(newArt);
   }
 
+  log(statement: string) {
+    const timestamp = new Date().getHours() + ' ' + new Date().getMinutes() + ' ' + new Date().getSeconds();
+    console.log(timestamp + ': ' + statement);
+  }
+
 }

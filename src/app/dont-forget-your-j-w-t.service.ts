@@ -19,6 +19,7 @@ export class DontForgetYourJWTService implements HttpInterceptor {
         Authorization: `Bearer ${this.auth.getToken()}`
       }
     });
+    console.log('DontForgetYourJWTService attached a token\n\n' + this.auth.getToken());
     return next.handle(request);
   }
 }

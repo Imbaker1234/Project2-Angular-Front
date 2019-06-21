@@ -66,6 +66,7 @@ import {ShowingsFormComponent} from './showings-form/showings-form.component';
 import {DeleteComponent} from './delete/delete.component';
 import {HeartComponent} from './heart/heart.component';
 import {DontForgetYourJWTService} from './dont-forget-your-j-w-t.service';
+import {ThanksForTheJWTService} from './thanks-for-the-jwt.service';
 
 @NgModule({
   declarations: [
@@ -146,6 +147,11 @@ import {DontForgetYourJWTService} from './dont-forget-your-j-w-t.service';
     {
       provide: HTTP_INTERCEPTORS,
       useClass: DontForgetYourJWTService,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ThanksForTheJWTService,
       multi: true
     }
   ],
