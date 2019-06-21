@@ -18,7 +18,7 @@ export class AuthService {
     return localStorage.getItem('swJWT');
   }
 
-  loginUserOld(username: string, password: string): User {
+  loginUserOldest(username: string, password: string): User {
     this.stateService.log('AuthService.loginUser(' + username + ', ' + password + ') called');
     let returnVar: User = null;
     const endpoint = this.theAustinAPIbase + 'auth';
@@ -35,21 +35,29 @@ export class AuthService {
   }
 
 
-  loginUser(login: string, password: string) {
+  loginUserJAVASCRIPT(login: string, password: string) {
     this.stateService.log('AuthService.loginUser(' + login + ', ' + password + ')');
     const endpoint = this.theAustinAPIbase + 'auth';
-    const outgoing = JSON.stringify([login, password]);
+    // const outgoing = JSON.parse();
     const xhr = new XMLHttpRequest();
     xhr.open('POST', endpoint, true);
-    xhr.send(outgoing);
+    xhr.send('userUsername: ' + login + ', userPassword: ' + password);
 
     // tslint:disable-next-line:only-arrow-functions
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status === 200) {
-        const result = JSON.parse(xhr.responseText);
+        const result = JSON.stringify(xhr.responseText);
         window.localStorage.setItem('swJWT', xhr.getResponseHeader('Authorization'));
-        return result;
+        console.log('Result of loginUser\n\n' + result);
       }
     };
+  }
+
+  loginUser(login: string, password: string) {
+    const endpoint = this.theAustinAPIbase + 'auth';
+    const credentials = [login, password];
+    return this.http
+      .post(endpoint, JSON.stringify(credentials)).toPromise()
+      .then(res => console.log(res));
   }
 }

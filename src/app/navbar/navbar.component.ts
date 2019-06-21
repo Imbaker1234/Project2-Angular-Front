@@ -37,7 +37,7 @@ export class NavbarComponent implements OnInit {
   }
 
   submitLogin() {
-    this.stateService.stateUser = this.authService.loginUser(this.lFormLogin, this.lFormPassword);
+    this.authService.loginUser(this.lFormLogin, this.lFormPassword);
 
     console.log('StateService.stateUser:\n' + this.stateService.stateUser);
   }
