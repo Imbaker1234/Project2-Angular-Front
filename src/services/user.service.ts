@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Observable, Subject} from 'rxjs';
+import {Subject} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {User} from '../app/models/user';
 import {StateService} from './state.service';
@@ -29,8 +29,8 @@ export class UserService {
     this.userSubject.next(newUser);
   }
 
-  registerUser(user: User): Observable<any> {
-    const returnVar = this.http.post<JSON>(this.swURLBase + 'user',
+  registerUser(user: User) {
+    const returnVar = this.http.post<User>(this.swURLBase + 'user',
       {
         userId: null,
         userUsername: user.username,
@@ -41,9 +41,10 @@ export class UserService {
         hearts: null,
         userRole: 1
       }
-    );
-    console.log('UserService.registerUser() called with value of\n' + returnVar);
-    return returnVar;
+    ).subscribe(data => {
+      console.log('UserService.registerUser() called with value of\n' + data);
+      return data;
+    });
   }
 
 }
