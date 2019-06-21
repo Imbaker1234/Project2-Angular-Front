@@ -30,8 +30,20 @@ export class UserService {
   }
 
   registerUser(user: User): Observable<any> {
-    return this.http.post<User>(this.swURLBase + '/user', user)
-      .pipe();
+    const returnVar = this.http.post<JSON>(this.swURLBase + 'user',
+      {
+        userId: null,
+        userUsername: user.username,
+        userPassword: user.password,
+        userFirstname: user.firstName,
+        userLastname: user.lastName,
+        userEmail: user.email,
+        hearts: null,
+        userRole: 1
+      }
+    );
+    console.log('UserService.registerUser() called with value of\n' + returnVar);
+    return returnVar;
   }
 
 }

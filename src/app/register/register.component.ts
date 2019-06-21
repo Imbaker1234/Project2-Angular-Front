@@ -82,6 +82,8 @@ export class RegisterComponent implements OnInit {
     );
 
     // TODO Add routing method.
-    this.router.navigate(['home']);
+    // this.router.navigate(['home']);
+    console.log('submitNewUser() called with values of\n' + this.username + '\n' +
+      this.password + '\n' + this.first + '\n' + this.last + '\n' + this.email);
   }
 }
