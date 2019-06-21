@@ -66,6 +66,7 @@ import { ShowingsFormComponent } from './showings-form/showings-form.component';
 import { DeleteComponent } from './delete/delete.component';
 import { HeartComponent } from './heart/heart.component';
 import {HttpinterceptorService} from './httpinterceptor.service';
+import { LogoutButtonComponent } from './logout-button/logout-button.component';
 
 @NgModule({
   declarations: [
@@ -96,7 +97,8 @@ import {HttpinterceptorService} from './httpinterceptor.service';
     NewsCarouselComponent,
     ShowingsFormComponent,
     DeleteComponent,
-    HeartComponent],
+    HeartComponent,
+    LogoutButtonComponent],
   imports: [
     BrowserModule,
     FormsModule,
