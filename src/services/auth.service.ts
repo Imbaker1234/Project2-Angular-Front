@@ -28,9 +28,10 @@ export class AuthService {
     const endpoint = this.theAustinAPIbase + 'auth';
     console.log('Searching using\n' + endpoint);
     this.http.post<User>(this.theAustinAPIbase + 'auth',
-      {userUsername: username, userPassword: password}
+      {userUsername: username, userPassword: password}, {observe: 'response'}
     ).subscribe(data => {
       console.log('UserService.registerUser() called with value of\n' + data);
+      localStorage.setItem('swJWT', data.headers.get('Authorization'));
       return data;
     });
     return null;
