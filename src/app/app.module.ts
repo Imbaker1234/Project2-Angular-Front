@@ -59,13 +59,13 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {ScrollingModule} from '@angular/cdk/scrolling';
-import { ArticlesComponent } from './articles/articles.component';
-import { MediumsComponent } from './mediums/mediums.component';
-import { NewsCarouselComponent } from './news-carousel/news-carousel.component';
-import { ShowingsFormComponent } from './showings-form/showings-form.component';
-import { DeleteComponent } from './delete/delete.component';
-import { HeartComponent } from './heart/heart.component';
-import {HttpinterceptorService} from './httpinterceptor.service';
+import {ArticlesComponent} from './articles/articles.component';
+import {MediumsComponent} from './mediums/mediums.component';
+import {NewsCarouselComponent} from './news-carousel/news-carousel.component';
+import {ShowingsFormComponent} from './showings-form/showings-form.component';
+import {DeleteComponent} from './delete/delete.component';
+import {HeartComponent} from './heart/heart.component';
+import {DontForgetYourJWTService} from './dont-forget-your-j-w-t.service';
 
 @NgModule({
   declarations: [
@@ -145,7 +145,7 @@ import {HttpinterceptorService} from './httpinterceptor.service';
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: HttpinterceptorService,
+      useClass: DontForgetYourJWTService,
       multi: true
     }
   ],
