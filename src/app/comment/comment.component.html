@@ -1,6 +1,6 @@
 <mat-card>
   <div id="comment-body">
-  <div *ngIf="stateService.stateUser.id>2">
+    <div *ngIf="this.userRole>2">
       <app-delete></app-delete>
       </div>
     <h4>{{authorName}}</h4>
