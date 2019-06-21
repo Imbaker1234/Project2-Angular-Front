@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { StateService } from 'services/state.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { Showing } from 'app/models/showing';
+import { ShowingService } from 'services/showing.service'
 
 @Component({
   selector: 'app-showings-form',
@@ -21,7 +23,7 @@ export class ShowingsFormComponent implements OnInit {
   show = false;
   reviewCardEffect = 'container animated fadeIn';
 
-  constructor(private stateService: StateService, private fb: FormBuilder) { }
+  constructor(private stateService: StateService, private fb: FormBuilder, private showingService: ShowingService) { }
 
   ngOnInit() {
     this.firstFormGroup = this.fb.group({
@@ -43,8 +45,17 @@ export class ShowingsFormComponent implements OnInit {
   }
 
   submitNewShowing() {
-    console.log(this.description);
-    console.log(this.time);
-    console.log(this.address);
+    this.showingService.addShowing(
+      new Showing(
+        null,
+        null, //This corresponds to the user object, may need to refactor
+        this.description,
+        this.time,
+        this.address,
+      )
+    );
+
+    // Return the user to the dashboard after successful submission
+    // this.router.navigate(['user-dashboard']);
   }
 }

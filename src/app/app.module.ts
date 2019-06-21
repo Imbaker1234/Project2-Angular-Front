@@ -64,6 +64,7 @@ import {MediumsComponent} from './mediums/mediums.component';
 import {NewsCarouselComponent} from './news-carousel/news-carousel.component';
 import {ShowingsFormComponent} from './showings-form/showings-form.component';
 import {HttpinterceptorService} from './httpinterceptor.service';
+import { CommentFormComponent } from './comment-form/comment-form.component';
 
 @NgModule({
   declarations: [
@@ -92,7 +93,8 @@ import {HttpinterceptorService} from './httpinterceptor.service';
     ArticlesComponent,
     MediumsComponent,
     NewsCarouselComponent,
-    ShowingsFormComponent],
+    ShowingsFormComponent,
+    CommentFormComponent],
   imports: [
     BrowserModule,
     FormsModule,
