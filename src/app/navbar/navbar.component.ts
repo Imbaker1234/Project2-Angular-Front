@@ -3,7 +3,6 @@ import {ArtService} from '../../services/art.service';
 import {ArtModel} from '../models/art-model';
 import {AuthService} from '../../services/auth.service';
 import {StateService} from '../../services/state.service';
-import {User} from '../models/user';
 
 @Component({
   selector: 'app-navbar',
@@ -38,23 +37,8 @@ export class NavbarComponent implements OnInit {
   }
 
   submitLogin() {
-    this.authService.loginUser(this.lFormLogin, this.lFormPassword).subscribe(
-      returnVar => {
+    this.stateService.stateUser = this.authService.loginUser(this.lFormLogin, this.lFormPassword);
 
-        this.stateService.stateUser = (new User(
-          returnVar.id,
-          returnVar.username,
-          returnVar.password,
-          returnVar.firstName,
-          returnVar.lastName,
-          returnVar.email,
-          returnVar.heart,
-          returnVar.role
-        ));
-      },
-      error => {
-        console.error(error);
-      }
-    );
+    console.log('StateService.stateUser:\n' + this.stateService.stateUser);
   }
 }
