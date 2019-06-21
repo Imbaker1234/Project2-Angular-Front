@@ -46,7 +46,9 @@ export class NavbarComponent implements OnInit {
           returnVar.password,
           returnVar.firstName,
           returnVar.lastName,
-          returnVar.email
+          returnVar.email,
+          returnVar.hearts,
+          returnVar.role
         ));
       },
       error => {
