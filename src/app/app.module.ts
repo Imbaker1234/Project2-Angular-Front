@@ -55,7 +55,7 @@ import {ShowingComponent} from './showing/showing.component';
 import {FavoriteArtComponent} from './favorite-art/favorite-art.component';
 import {ArtpieceComponent} from './artpiece/artpiece.component';
 import {CarouselComponent} from './carousel/carousel.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {ScrollingModule} from '@angular/cdk/scrolling';
@@ -65,6 +65,7 @@ import { NewsCarouselComponent } from './news-carousel/news-carousel.component';
 import { ShowingsFormComponent } from './showings-form/showings-form.component';
 import { DeleteComponent } from './delete/delete.component';
 import { HeartComponent } from './heart/heart.component';
+import {HttpinterceptorService} from './httpinterceptor.service';
 
 @NgModule({
   declarations: [
@@ -95,7 +96,6 @@ import { HeartComponent } from './heart/heart.component';
     NewsCarouselComponent,
     ShowingsFormComponent,
     DeleteComponent,
-    HeartgComponent,
     HeartComponent],
   imports: [
     BrowserModule,
@@ -142,7 +142,13 @@ import { HeartComponent } from './heart/heart.component';
     MatPaginatorModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpinterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

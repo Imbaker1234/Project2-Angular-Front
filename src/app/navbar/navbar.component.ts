@@ -41,13 +41,14 @@ export class NavbarComponent implements OnInit {
     this.authService.loginUser(this.lFormLogin, this.lFormPassword).subscribe(
       returnVar => {
 
-        this.stateService.updateUserSubject(new User(
+        this.stateService.stateUser = (new User(
+          returnVar.id,
           returnVar.username,
           returnVar.password,
           returnVar.firstName,
           returnVar.lastName,
           returnVar.email,
-          returnVar.hearts,
+          returnVar.heart,
           returnVar.role
         ));
       },
