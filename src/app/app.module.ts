@@ -64,7 +64,6 @@ import { MediumsComponent } from './mediums/mediums.component';
 import { NewsCarouselComponent } from './news-carousel/news-carousel.component';
 import { ShowingsFormComponent } from './showings-form/showings-form.component';
 import { DeleteComponent } from './delete/delete.component';
-import { HeartgComponent } from './heartg/heartg.component';
 import { HeartComponent } from './heart/heart.component';
 
 @NgModule({
