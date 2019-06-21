@@ -18,30 +18,37 @@ export class AuthService {
     return localStorage.getItem('swJWT');
   }
 
-  loginUserOldest(username: string, password: string): User {
-    this.stateService.log('AuthService.loginUser(' + username + ', ' + password + ') called');
-    let returnVar: User = null;
-    const endpoint = this.theAustinAPIbase + 'auth';
-    console.log('Searching using\n' + endpoint);
-    const theRequest = this.http.post<User>(this.theAustinAPIbase + 'auth',
-      {userUsername: username, userPassword: password}
-    ).subscribe(data => {
-      console.log('UserService.loginUser() called with value of\n' + data);
-      returnVar = data;
-    });
+  // loginUserOld(username: string, password: string): User {
+  //   this.stateService.log('loginUser called with ' + username + ', ' + password);
+  //   let loggedIn = this.http.post<User>(this.theAustinAPIbase + 'auth',
+  //     {
+  //       userUsername: username,
+  //       userPassword: password
+  //     }
+  //   ).subscribe(data => {
+  //     return new User(
+  //       data.id,
+  //       data.username,
+  //       data.password,
+  //       data.firstName,
+  //       data.lastName,
+  //       data.email,
+  //       data.heart,
+  //       data.role
+  //     );
+  //   });
+  //   console.log('Didn\'t get a proper return value');
+  //   return loggedIn;
+  // }
 
-    this.stateService.log('AuthService.loginUser() returned value of\n\n' + returnVar);
-    return returnVar;
-  }
 
-
-  loginUserJAVASCRIPT(login: string, password: string) {
+  loginUser(login: string, password: string) {
     this.stateService.log('AuthService.loginUser(' + login + ', ' + password + ')');
     const endpoint = this.theAustinAPIbase + 'auth';
-    // const outgoing = JSON.parse();
+    const outgoing = { userUsername: login, userPassword: password};
     const xhr = new XMLHttpRequest();
     xhr.open('POST', endpoint, true);
-    xhr.send('userUsername: ' + login + ', userPassword: ' + password);
+    xhr.send(JSON.stringify(outgoing))
 
     // tslint:disable-next-line:only-arrow-functions
     xhr.onreadystatechange = function() {
@@ -53,7 +60,7 @@ export class AuthService {
     };
   }
 
-  loginUser(login: string, password: string) {
+  loginUserLol(login: string, password: string) {
     const endpoint = this.theAustinAPIbase + 'auth';
     const credentials = [login, password];
     return this.http
