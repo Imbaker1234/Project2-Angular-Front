@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {ArtModel} from './art-model';
+import {ArtModel} from '../app/models/art-model';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
@@ -8,7 +8,7 @@ declare var $: any;
 @Injectable({
   providedIn: 'root'
 })
-export class HarvardAccessService {
+export class ArtService {
   harvardKey = '79371960-9294-11e9-9dbd-c19aaf23e283';
   urlBase = 'https://api.harvardartmuseums.org/image/';
   apiParam = '?apikey=';
@@ -21,9 +21,11 @@ export class HarvardAccessService {
   // Creating and returning an observable which requests this information
   // Subscription happens in the component that calls this method.
   getById(id: number): Observable<any> {
+    console.log('Harvard-Access-Service.getById(' + id + ')');
     // This is just waiting to receive the specified object in the brackets. Returning it once
     // it has it. (See Navbar for further demo)
-    return this.http.get<ArtModel[]>(this.urlBase + id + this.apiParam + this.harvardKey);
+    return this.http.get<ArtModel>(this.urlBase + id + this.apiParam + this.harvardKey);
   }
+
 
 }

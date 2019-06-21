@@ -1,0 +1,70 @@
+<div class="container animated fadeIn slow">
+  <mat-card style="box-shadow: #1f1f1f 2px 2px 1px 1px">
+    <div style="text-align: center">
+      <h4>Want to show off your art? We'd love to tell everyone about you!</h4>
+    </div>
+    <mat-divider></mat-divider>
+    <mat-horizontal-stepper #stepper [linear]="isLinear">
+
+      <div style="align-content: center">
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Description</ng-template>
+            <mat-form-field>
+              <input [(ngModel)]="description" formControlName="firstCtrl" matInput minlength="2"
+                     placeholder="Describe your art showing here."
+                     required>
+            </mat-form-field>
+            <div>
+              <button mat-raised-button matStepperNext>></button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Date & Time</ng-template>
+            <mat-form-field>
+              <input [(ngModel)]="time" formControlName="secondCtrl" matInput minlength="2"
+                     placeholder="When is your show?" required>
+            </mat-form-field>
+            <div>
+              <button mat-raised-button matStepperPrevious><</button>
+              <button mat-raised-button matStepperNext>></button>
+            </div>
+          </form>
+        </mat-step>
+        <div>
+
+          <mat-step [stepControl]="thirdFormGroup">
+            <form [formGroup]="thirdFormGroup">
+              <ng-template matStepLabel>Address</ng-template>
+              <mat-form-field>
+                <input [(ngModel)]="address" formControlName="thirdCtrl" matInput
+                       placeholder="Where can we find your show?" required>
+              </mat-form-field>
+              <div>
+                <button mat-raised-button matStepperPrevious><</button>
+                <button mat-raised-button matStepperNext>></button>
+              </div>
+            </form>
+          </mat-step>
+        </div>
+
+    <div *ngIf="reviewDetails" [ngClass]="reviewCardEffect" class="container animated fadeIn" id="reviewCard">
+      <mat-divider></mat-divider>
+      <br>
+      <br>Description: {{ description}}
+      <br>Date & Time: {{ time }}
+      <br>Address: {{ address }}
+      <br>
+      <br>
+      <mat-divider></mat-divider>
+      <br>
+      <br>
+      <button (click)="this.reviewDetails = false" mat-raised-button>Wait a moment...</button>
+      <button (click)="this.toggleReviewDetails()" mat-raised-button>Wait a moment....</button>
+      <button (click)="submitNewShowing()" mat-raised-button>Everything's correct!</button>
+    </div>
+  </mat-card>
+</div>
