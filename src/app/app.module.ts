@@ -59,12 +59,14 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {ScrollingModule} from '@angular/cdk/scrolling';
-import {ArticlesComponent} from './articles/articles.component';
-import {MediumsComponent} from './mediums/mediums.component';
-import {NewsCarouselComponent} from './news-carousel/news-carousel.component';
-import {ShowingsFormComponent} from './showings-form/showings-form.component';
-import {DeleteComponent} from './delete/delete.component';
-import {HeartComponent} from './heart/heart.component';
+import { ArticlesComponent } from './articles/articles.component';
+import { MediumsComponent } from './mediums/mediums.component';
+import { NewsCarouselComponent } from './news-carousel/news-carousel.component';
+import { ShowingsFormComponent } from './showings-form/showings-form.component';
+import { DeleteComponent } from './delete/delete.component';
+import { HeartComponent } from './heart/heart.component';
+import {HttpinterceptorService} from './httpinterceptor.service';
+import { LogoutButtonComponent } from './logout-button/logout-button.component';
 import {DontForgetYourJWTService} from './dont-forget-your-j-w-t.service';
 import {ThanksForTheJWTService} from './thanks-for-the-jwt.service';
 
@@ -97,7 +99,8 @@ import {ThanksForTheJWTService} from './thanks-for-the-jwt.service';
     NewsCarouselComponent,
     ShowingsFormComponent,
     DeleteComponent,
-    HeartComponent],
+    HeartComponent,
+    LogoutButtonComponent],
   imports: [
     BrowserModule,
     FormsModule,
