@@ -40,7 +40,7 @@
             <form [formGroup]="thirdFormGroup">
               <ng-template matStepLabel>Address</ng-template>
               <mat-form-field>
-                <input [(ngModel)]="address" email="" formControlName="thirdCtrl" matInput
+                <input [(ngModel)]="address" formControlName="thirdCtrl" matInput
                        placeholder="Where can we find your show?" required>
               </mat-form-field>
               <div>
@@ -62,9 +62,9 @@
       <mat-divider></mat-divider>
       <br>
       <br>
-      <button (click)="this.reviewDetails = false" mat-raised-button>No wait....</button>
-      <button (click)="this.toggleReviewDetails()" mat-raised-button>No wait....</button>
-      <button (click)="submitNewShowing()" mat-raised-button>Look's Good!</button>
+      <button (click)="this.reviewDetails = false" mat-raised-button>Wait a moment...</button>
+      <button (click)="this.toggleReviewDetails()" mat-raised-button>Wait a moment....</button>
+      <button (click)="submitNewShowing()" mat-raised-button>Everything's correct!</button>
     </div>
   </mat-card>
 </div>
