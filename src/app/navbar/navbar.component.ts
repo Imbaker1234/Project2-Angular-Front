@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {HarvardAccessService} from '../harvard-access.service';
-import {ArtModel} from '../art-model';
-import {AuthService} from '../auth.service';
-import {StateService} from '../state.service';
+import {ArtService} from '../../services/art.service';
+import {ArtModel} from '../models/art-model';
+import {AuthService} from '../../services/auth.service';
+import {StateService} from '../../services/state.service';
 import {User} from '../models/user';
 
 @Component({
@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
   lFormLogin: string;
   lFormPassword: string;
 
-  constructor(private harvardAccessService: HarvardAccessService, private authService: AuthService, private stateService: StateService) {
+  constructor(private harvardAccessService: ArtService, private authService: AuthService, private stateService: StateService) {
   }
 
   ngOnInit() {

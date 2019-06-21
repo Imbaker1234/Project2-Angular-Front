@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {ArtModel} from './art-model';
+import {ArtModel} from '../app/models/art-model';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
@@ -8,7 +8,7 @@ declare var $: any;
 @Injectable({
   providedIn: 'root'
 })
-export class HarvardAccessService {
+export class ArtService {
   harvardKey = '79371960-9294-11e9-9dbd-c19aaf23e283';
   urlBase = 'https://api.harvardartmuseums.org/image/';
   apiParam = '?apikey=';

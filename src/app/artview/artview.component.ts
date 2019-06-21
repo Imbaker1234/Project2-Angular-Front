@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {HarvardAccessService} from '../harvard-access.service';
-import {StateService} from '../state.service';
+import {ArtService} from '../../services/art.service';
+import {StateService} from '../../services/state.service';
 
 @Component({
   selector: 'app-artview',
@@ -12,7 +12,7 @@ export class ArtviewComponent implements OnInit {
   shownArtId: number;
   shownArtURL: string;
 
-  constructor(private harvardAccessService: HarvardAccessService, private stateService: StateService) {
+  constructor(private harvardAccessService: ArtService, private stateService: StateService) {
     this.stateService.artSubject$.subscribe(
       data => {
         this.shownArtURL = data.baseimageurl;
