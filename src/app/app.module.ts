@@ -55,14 +55,15 @@ import {ShowingComponent} from './showing/showing.component';
 import {FavoriteArtComponent} from './favorite-art/favorite-art.component';
 import {ArtpieceComponent} from './artpiece/artpiece.component';
 import {CarouselComponent} from './carousel/carousel.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {ScrollingModule} from '@angular/cdk/scrolling';
-import { ArticlesComponent } from './articles/articles.component';
-import { MediumsComponent } from './mediums/mediums.component';
-import { NewsCarouselComponent } from './news-carousel/news-carousel.component';
-import { ShowingsFormComponent } from './showings-form/showings-form.component';
+import {ArticlesComponent} from './articles/articles.component';
+import {MediumsComponent} from './mediums/mediums.component';
+import {NewsCarouselComponent} from './news-carousel/news-carousel.component';
+import {ShowingsFormComponent} from './showings-form/showings-form.component';
+import {HttpinterceptorService} from './httpinterceptor.service';
 
 @NgModule({
   declarations: [
@@ -137,7 +138,13 @@ import { ShowingsFormComponent } from './showings-form/showings-form.component';
     MatPaginatorModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpinterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

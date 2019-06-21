@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {UserService} from '../../services/user.service';
+import {User} from '../models/user';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -24,7 +27,7 @@ export class RegisterComponent implements OnInit {
   show = false;
   reviewCardEffect = 'container animated fadeIn';
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private userService: UserService, private router: Router) {
   }
 
   get stateName() {
@@ -65,10 +68,20 @@ export class RegisterComponent implements OnInit {
   }
 
   submitNewUser() {
-    console.log(this.username);
-    console.log(this.password);
-    console.log(this.first);
-    console.log(this.last);
-    console.log(this.email);
+    this.userService.registerUser(
+      new User(
+        null,
+        this.username,
+        this.password,
+        this.first,
+        this.last,
+        this.email,
+        null,
+        null
+      )
+    );
+
+    // TODO Add routing method.
+    this.router.navigate(['home']);
   }
 }

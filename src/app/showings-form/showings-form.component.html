@@ -51,20 +51,22 @@
           </mat-step>
         </div>
 
-    <div *ngIf="reviewDetails" [ngClass]="reviewCardEffect" class="container animated fadeIn" id="reviewCard">
-      <mat-divider></mat-divider>
-      <br>
-      <br>Description: {{ description}}
-      <br>Date & Time: {{ time }}
-      <br>Address: {{ address }}
-      <br>
-      <br>
-      <mat-divider></mat-divider>
-      <br>
-      <br>
-      <button (click)="this.reviewDetails = false" mat-raised-button>Wait a moment...</button>
-      <button (click)="this.toggleReviewDetails()" mat-raised-button>Wait a moment....</button>
-      <button (click)="submitNewShowing()" mat-raised-button>Everything's correct!</button>
-    </div>
+        <div *ngIf="reviewDetails" [ngClass]="reviewCardEffect" class="container animated fadeIn" id="reviewCard">
+          <mat-divider></mat-divider>
+          <br>
+          <br>Description: {{ description}}
+          <br>Date & Time: {{ time }}
+          <br>Address: {{ address }}
+          <br>
+          <br>
+          <mat-divider></mat-divider>
+          <br>
+          <br>
+          <button (click)="this.reviewDetails = false" mat-raised-button>Wait a moment...</button>
+          <button (click)="this.toggleReviewDetails()" mat-raised-button>Wait a moment....</button>
+          <button (click)="submitNewShowing()" mat-raised-button>Everything's correct!</button>
+        </div>
+      </div>
+    </mat-horizontal-stepper>
   </mat-card>
 </div>
