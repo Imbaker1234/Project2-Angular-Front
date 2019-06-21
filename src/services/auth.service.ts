@@ -43,6 +43,7 @@ export class AuthService {
     xhr.open('POST', endpoint, true);
     xhr.send(outgoing);
 
+    // tslint:disable-next-line:only-arrow-functions
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status === 200) {
         const result = JSON.parse(xhr.responseText);
