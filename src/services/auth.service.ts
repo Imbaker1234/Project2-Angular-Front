@@ -25,14 +25,20 @@ export class AuthService {
   }
 
   loginUser(username: string, password: string): User {
+    let returnVar: User = null;
     const endpoint = this.theAustinAPIbase + 'auth';
     console.log('Searching using\n' + endpoint);
-    this.http.post<User>(this.theAustinAPIbase + 'auth',
+    const theRequest = this.http.post<User>(this.theAustinAPIbase + 'auth',
       {userUsername: username, userPassword: password}
-    ).subscribe(data => {
+    );
+
+    theRequest.subscribe(data => {
       console.log('UserService.registerUser() called with value of\n' + data);
-      return data;
+      returnVar = data;
     });
-    return null;
+
+    theRequest;
+
+    return returnVar;
   }
 }

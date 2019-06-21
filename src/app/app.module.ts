@@ -67,6 +67,7 @@ import { DeleteComponent } from './delete/delete.component';
 import { HeartComponent } from './heart/heart.component';
 import {HttpinterceptorService} from './httpinterceptor.service';
 import { LogoutButtonComponent } from './logout-button/logout-button.component';
+import {DontForgetYourJWTService} from './dont-forget-your-j-w-t.service';
 
 @NgModule({
   declarations: [
@@ -147,7 +148,7 @@ import { LogoutButtonComponent } from './logout-button/logout-button.component';
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: HttpinterceptorService,
+      useClass: DontForgetYourJWTService,
       multi: true
     }
   ],
