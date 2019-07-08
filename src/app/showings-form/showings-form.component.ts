@@ -44,18 +44,18 @@ export class ShowingsFormComponent implements OnInit {
     this.reviewDetails = !this.reviewDetails;
   }
 
-  submitNewShowing() {
-    this.showingService.addShowing(
-      new Showing(
-        null,
-        null, //This corresponds to the user object, may need to refactor
-        this.description,
-        this.time,
-        this.address,
-      )
-    );
+  // submitNewShowing() {
+  //   this.showingService.addShowing(
+  //     new Showing(
+  //       null,
+  //       null, //This corresponds to the user object, may need to refactor
+  //       this.description,
+  //       this.time,
+  //       this.address,
+  //     )
+  //   );
 
-    // Return the user to the dashboard after successful submission
-    // this.router.navigate(['user-dashboard']);
-  }
+  //   // Return the user to the dashboard after successful submission
+  //   // this.router.navigate(['user-dashboard']);
+  // }
 }

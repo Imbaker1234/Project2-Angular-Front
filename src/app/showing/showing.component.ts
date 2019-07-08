@@ -23,11 +23,11 @@ export class ShowingComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get("URL") //Insert URL here
-        .subscribe(response => {
-           this.showingsTable = response;
-           this.showingsTableDataSource.data = this.showingsTable;
-    });
+    // this.http.get("URL") //Insert URL here
+    //     .subscribe(response => {
+    //        this.showingsTable = response;
+    //        this.showingsTableDataSource.data = this.showingsTable;
+    // });
  }
 
 }
