@@ -59,6 +59,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {ScrollingModule} from '@angular/cdk/scrolling';
+<<<<<<< HEAD
 import { ArticlesComponent } from './articles/articles.component';
 import { MediumsComponent } from './mediums/mediums.component';
 import { NewsCarouselComponent } from './news-carousel/news-carousel.component';
@@ -67,6 +68,17 @@ import { DeleteComponent } from './delete/delete.component';
 import { HeartComponent } from './heart/heart.component';
 import {HttpinterceptorService} from './httpinterceptor.service';
 import { CommentFormComponent } from './comment-form/comment-form.component';
+=======
+import {ArticlesComponent} from './articles/articles.component';
+import {MediumsComponent} from './mediums/mediums.component';
+import {NewsCarouselComponent} from './news-carousel/news-carousel.component';
+import {ShowingsFormComponent} from './showings-form/showings-form.component';
+import {DeleteComponent} from './delete/delete.component';
+import {HeartComponent} from './heart/heart.component';
+import {LogoutButtonComponent} from './logout-button/logout-button.component';
+import {DontForgetYourJWTService} from './dont-forget-your-j-w-t.service';
+import {ThanksForTheJWTService} from './thanks-for-the-jwt.service';
+>>>>>>> 82f99643ec4a54d59f3c1a8f360eb02d4715f43d
 
 @NgModule({
   declarations: [
@@ -97,7 +109,8 @@ import { CommentFormComponent } from './comment-form/comment-form.component';
     NewsCarouselComponent,
     ShowingsFormComponent,
     DeleteComponent,
-    HeartComponent],
+    HeartComponent,
+    LogoutButtonComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -146,7 +159,12 @@ import { CommentFormComponent } from './comment-form/comment-form.component';
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: HttpinterceptorService,
+      useClass: DontForgetYourJWTService,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ThanksForTheJWTService,
       multi: true
     }
   ],

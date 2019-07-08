@@ -6,19 +6,20 @@ import {AuthService} from '../services/auth.service';
 @Injectable({
   providedIn: 'root'
 })
-export class HttpinterceptorService implements HttpInterceptor {
+export class DontForgetYourJWTService implements HttpInterceptor {
 
   constructor(public auth: AuthService) {
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-    request = request.clone({
-      setHeaders: {
-        Authorization: `Bearer ${this.auth.getToken()}`
-      }
-    });
+    // request = request.clone({
+    //
+    //   setHeaders: {
+    //     Authorization: `Bearer ${this.auth.getToken()}`
+    //   }
+    // });
+    // console.log('DontForgetYourJWTService attached a token\n\n' + this.auth.getToken());
     return next.handle(request);
   }
-
 }
