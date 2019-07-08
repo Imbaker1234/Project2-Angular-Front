@@ -96,12 +96,8 @@ import { CommentFormComponent } from './comment-form/comment-form.component';
     MediumsComponent,
     NewsCarouselComponent,
     ShowingsFormComponent,
-<<<<<<< HEAD
-    CommentFormComponent],
-=======
     DeleteComponent,
     HeartComponent],
->>>>>>> 80ff813c41a4f5e5d7b2421c2720d2ab46612cbb
   imports: [
     BrowserModule,
     FormsModule,

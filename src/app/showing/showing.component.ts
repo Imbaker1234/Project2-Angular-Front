@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { Component, OnInit } from "@angular/core";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { ActivatedRoute, Router } from "@angular/router";
+import { MatTableDataSource } from "@angular/material";
 
 @Component({
   selector: 'app-showing',
@@ -7,9 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowingComponent implements OnInit {
 
-  constructor() { }
+  showingsTable: any[] = [];
+  showingsTableDataSource = new MatTableDataSource(this.showingsTable);
+  displayedColumns: string[] = [
+    "Host",
+    "Description",
+    "Time",
+    "Address"
+  ];
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
-  }
+    this.http.get("URL") //Insert URL here
+        .subscribe(response => {
+           this.showingsTable = response;
+           this.showingsTableDataSource.data = this.showingsTable;
+    });
+ }
 
 }
